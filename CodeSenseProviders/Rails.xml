@@ -4,7 +4,7 @@
 <!--All-->
 
     <provider>
-        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails</selector>
+        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails, container.class.model, container.class.controller</selector>
         <completions>com.rails.find</completions>
         <complete-match>(find)</complete-match>
     </provider>
