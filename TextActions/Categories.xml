@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<action-categories>
+
+	<category id="actions.snippets.rails" show="sub">
+		<title>Rails</title>
+	</category>
+	<category id="actions.snippets.rails.logger" show="sub">
+		<title>Logger</title>
+	</category>
+
+<!--Models-->
+
+	<category id="actions.snippets.rails.models" show="sub">
+		<title>Models</title>
+	</category>
+	<category id="actions.snippets.rails.models.associations" show="sub">
+		<title>Associations</title>
+	</category>
+	<category id="actions.snippets.rails.models.scopes" show="sub">
+		<title>Scopes</title>
+	</category>
+	<category id="actions.snippets.rails.models.find" show="sub">
+		<title>Find</title>
+	</category>
+	
+<!--	Controllers-->
+
+	<category id="actions.snippets.rails.controllers" show="sub">
+		<title>Controllers</title>
+	</category>
+	<category id="actions.snippets.rails.controllers.redirect_to" show="sub">
+		<title>redirect_to</title>
+	</category>
+	<category id="actions.snippets.rails.controllers.render" show="sub">
+		<title>render</title>
+	</category>
+	
+<!--	Views-->
+	
+	<category id="actions.snippets.rails.views" show="sub">
+		<title>Layouts</title>
+	</category>
+	<category id="actions.snippets.rails.views.render" show="sub">
+		<title>render</title>
+	</category>
+	<category id="actions.snippets.rails.views.form" show="sub">
+		<title>form</title>
+	</category>
+
+<!--Routes-->
+
+	<category id="actions.snippets.rails.routes" show="sub">
+		<title>Routes</title>
+	</category>
+
+</action-categories>

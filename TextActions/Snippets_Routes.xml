@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <snippet id="actions.snippets.rails.controllers.routes.map_resources"
+         category="actions.snippets.rails/actions.snippets.rails.routes">
+	<title>map.resources</title>
+			<text>
+			${1:map}.resources :${2:resource}${10: do |${11:$2}|
+              $0
+            end}
+			</text>
+	<text-trigger>maprs</text-trigger>
+    <syntax-context>container.class.routes</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.routes.map_resource"
+         category="actions.snippets.rails/actions.snippets.rails.routes">
+	<title>map.resource</title>
+			<text>
+            ${1:map}.resource :${2:resource}${10: do |${11:$2}|
+              $0
+            end}
+			</text>
+	<text-trigger>mapr</text-trigger>
+    <syntax-context>container.class.routes</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.routes.map_with_options"
+         category="actions.snippets.rails/actions.snippets.rails.routes">
+	<title>map.with_options</title>
+			<text>
+            ${1:map}.with_options :${2:controller} => '${3:thing}' do |${4:$3}|
+            	$0
+            end
+			</text>
+	<text-trigger>mapwo</text-trigger>
+    <syntax-context>container.class.routes</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.routes.map_catch_all"
+         category="actions.snippets.rails/actions.snippets.rails.routes">
+	<title>map.catch_all</title>
+			<text>
+            ${1:map}.catch_all "*${2:anything}", :controller => "${3:default}", :action => "${4:error}"
+			</text>
+	<text-trigger>mapca</text-trigger>
+    <syntax-context>container.class.routes</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.routes.map_named_route"
+         category="actions.snippets.rails/actions.snippets.rails.routes">
+	<title>map.named_route</title>
+			<text>
+            ${1:map}.${2:connect} '${3::controller/:action/:id}'
+			</text>
+	<text-trigger>mapnr</text-trigger>
+    <syntax-context>container.class.routes</syntax-context>
+    </snippet>
+
+</action-recipes>

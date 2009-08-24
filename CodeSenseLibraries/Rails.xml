@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+    
+    <set name="com.rails.find">
+        <completion string="find_by_" />
+        <completion string="find_all_by_" />
+		<completion string="find_or_create_by_" />
+		<completion string="find_or_initialize_by_" />
+    </set>
+
+    <set name="com.rails.after">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="after_create" />
+		<completion string="after_destroy" />
+		<completion string="after_save" />
+		<completion string="after_update" />
+		<completion string="after_validation" />
+		<completion string="after_validation_on_create" />
+		<completion string="after_validation_on_update" />
+    </set>
+
+    <set name="com.rails.before">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="before_create" />
+		<completion string="before_destroy" />
+		<completion string="before_save" />
+		<completion string="before_update" />
+		<completion string="before_validation" />
+		<completion string="before_validation_on_create" />
+		<completion string="before_validation_on_update" />
+    </set>
+
+    <set name="com.rails.filter_before">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="before_filter" />
+    </set>
+
+    <set name="com.rails.filter_after">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="after_filter" />
+    </set>
+    
+    <set name="com.rails.association_has">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="has_one" />
+        <completion string="has_many" />
+        <completion string="has_and_belongs_to_many" />
+        <completion string="has_many :through =>" />
+    </set>
+    
+    <set name="com.rails.association_belongs">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="belongs_to" />
+    </set>
+    
+    <set name="com.rails.validation">
+        <behavior>
+            <append-static>  :${1:}</append-static>
+        </behavior>
+        <completion string="validates_acceptance_of" />
+        <completion string="validates_associated" />
+        <completion string="validates_confirmation_of" />
+        <completion string="validates_each" />
+        <completion string="validates_exclusion_of" />
+        <completion string="validates_format_of" />
+        <completion string="validates_inclusion_of" />
+        <completion string="validates_length_of" />
+        <completion string="validates_numericality_of" />
+        <completion string="validates_presence_of" />
+        <completion string="validates_size_of" />
+        <completion string="validates_uniqueness_of" />
+    </set>
+
+    <set name="com.rails.validate">
+        <completion string="validate" />
+        <completion string="validate_on_create" />
+        <completion string="validate_on_update" />
+    </set>
+    
+    
+    
+</codesense>

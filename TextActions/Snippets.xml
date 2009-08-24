@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+<!--Logger-->
+    <snippet id="actions.snippets.rails.logger.debug" 
+    category="actions.snippets.rails/actions.snippets.rails.logger">
+		<title>logger.debug</title>
+				<text>logger.debug { "${1:message}" }$0</text>
+		<text-trigger>logd</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.logger.info" 
+    category="actions.snippets.rails/actions.snippets.rails.logger">
+		<title>logger.info</title>
+				<text>logger.info { "${1:message}" }$0</text>
+		<text-trigger>logi</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.logger.warn" 
+    category="actions.snippets.rails/actions.snippets.rails.logger">
+		<title>logger.warn</title>
+				<text>logger.warn { "${1:message}" }$0</text>
+		<text-trigger>logw</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.logger.error" 
+    category="actions.snippets.rails/actions.snippets.rails.logger">
+		<title>logger.error</title>
+				<text>logger.error { "${1:message}" }$0</text>
+		<text-trigger>loge</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.logger.fatal" 
+    category="actions.snippets.rails/actions.snippets.rails.logger">
+		<title>logger.fatal</title>
+				<text>logger.fatal { "${1:message}" }$0</text>
+		<text-trigger>logf</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    </snippet>
+
+</action-recipes>

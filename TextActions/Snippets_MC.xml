@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+<!--find-->
+
+    <snippet id="actions.snippets.rails.models.find.all"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find(:all, :conditions)</title>
+			<text>find(:all${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})</text>
+	<text-trigger>fina</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.find.first"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find(:first, :conditions)</title>
+			<text>find(:first${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})</text>
+	<text-trigger>finf</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.find.last"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find(:last, :conditions)</title>
+			<text>find(:last${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})</text>
+	<text-trigger>finl</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.find.id"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find(:id)</title>
+			<text>find(${1:id})</text>
+	<text-trigger>fini</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.find.in_batches"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find_in_batches</title>
+			<text>
+                find_in_batches(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}s|
+                	$4s.each do |$4|
+                		$0
+                	end
+                end
+			</text>
+	<text-trigger>finb</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.find.each"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
+	<title>find_each</title>
+			<text>
+            find_each(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}|
+            	$0
+            end			
+			</text>
+	<text-trigger>fine</text-trigger>
+    <syntax-context>container.class.model, container.class.controller</syntax-context>
+    </snippet>
+
+</action-recipes>

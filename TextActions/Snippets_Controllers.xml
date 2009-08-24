@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+<!--    Controllers, redirect_to-->
+    <snippet id="actions.snippets.rails.controllers.redirect_to.path"
+         category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (path)</title>
+			<text>redirect_to(${2:${12:model}_path(${13:@}${14:${12}})})</text>
+	<text-trigger>rep</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.path_plural"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (path plural)</title>
+			<text>redirect_to(${2:${10:model}s_path})</text>
+	<text-trigger>repp</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.nested_path"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (nested path)</title>
+			<text>redirect_to(${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})})</text>
+	<text-trigger>renp</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.nested_path_plural"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (nested path plural)</title>
+			<text>redirect_to(${2:${10:parent}_${11:child}_path(${12:@}${13:${10}})})</text>
+	<text-trigger>renpp</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.action"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (action)</title>
+			<text>redirect_to :action => "${1:index}"</text>
+	<text-trigger>rea</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.action_id"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (action, id)</title>
+			<text>redirect_to :action => "${1:show}", :id => ${0:@item}</text>
+	<text-trigger>reai</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.controller"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (controller)</title>
+			<text>redirect_to :controller => "${1:items}"</text>
+	<text-trigger>rec</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.controller_action"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (controller, action)</title>
+			<text>redirect_to :controller => "${1:items}", :action => "${2:list}"</text>
+	<text-trigger>reca</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.controller_action_id"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (controller, action, id)</title>
+			<text>redirect_to :controller => "${1:items}", :action => "${2:show}", :id => ${0:@item}</text>
+	<text-trigger>recai</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.back"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (back)</title>
+			<text>redirect_to :back</text>
+	<text-trigger>reb</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.redirect_to.root"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
+	<title>redirect_to (root)</title>
+			<text>redirect_to root_url</text>
+	<text-trigger>rer</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+<!--Controllers, render-->
+
+    <snippet id="actions.snippets.rails.controllers.render.action"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (action)</title>
+			<text>render :action => "${1:action}"</text>
+	<text-trigger>ra</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.action_layout"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (action, layout)</title>
+			<text>render :action => "${1:action}", :layout => "${2:layoutname}"</text>
+	<text-trigger>ral</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.text"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (text)</title>
+			<text>render :text => "${1:text to render...}"</text>
+	<text-trigger>rt</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.text_layout"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (text, layout)</title>
+			<text>render :text => "${1:text to render...}", :layout => "${2:layoutname}"</text>
+	<text-trigger>rtl</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.text_layout_true"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (text, layout => true )</title>
+			<text>render :text => "${1:text to render...}", :layout => ${2:true}</text>
+	<text-trigger>rtlt</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.text_status"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (text, status)</title>
+			<text>render :text => "${1:text to render...}", :status => ${2:401}</text>
+	<text-trigger>rts</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.nothing"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (nothing)</title>
+			<text>render :nothing => ${1:true}</text>
+	<text-trigger>rn</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.nothing_status"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (nothing, status)</title>
+			<text>render :nothing => ${1:true}, :status => ${2:401}</text>
+	<text-trigger>rns</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.file"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (file)</title>
+			<text>render :file => "${1:filepath}</text>
+	<text-trigger>rf</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.file_full_path"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (file, use_full_path)</title>
+			<text>render :file => "${1:filepath}", :use_full_path => ${2:false}</text>
+	<text-trigger>rfu</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.update"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (update)</title>
+			<text>
+			render :update do |${2:page}|
+            	$2.$0
+            end
+            </text>
+	<text-trigger>ru</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+    
+    <snippet id="actions.snippets.rails.controllers.render.inline_type"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (inline, type)</title>
+			<text>render :inline => "${1:&lt;%= 'hello' %>}", :type => ${2::rxml}</text>
+	<text-trigger>rit</text-trigger>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.inline_locals"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (inline, locals)</title>
+			<text>render :inline => "${1:&lt;%= 'hello' %>}", :locals => { ${2::name} => "${3:value}"$4 }</text>
+	<text-trigger>ril</text-trigger>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.render.inline_only"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
+	<title>render (inline)</title>
+			<text>render :inline => "${1:&lt;%= 'hello' %>}"</text>
+	<text-trigger>ri</text-trigger>
+    </snippet>
+
+
+<!--Controllers, respond_to-->
+
+    <snippet id="actions.snippets.rails.controllers.respond_to"     category="actions.snippets.rails/actions.snippets.rails.controllers">
+	<title>respond_to</title>
+			<text>
+            respond_to do |wants|
+            	wants.${1:html}${2: { $0 \}}
+            end
+            </text>
+	<text-trigger>rest</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.respond_to_html"     category="actions.snippets.rails/actions.snippets.rails.controllers">
+	<title>respond_to (html)</title>
+			<text>
+            respond_to do |wants|
+            	wants.html do
+            		$TM_SELECTED_TEXT
+            	end
+            	wants.${1:js} { $0 }
+            end
+            </text>
+	<text-trigger>resth</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+</action-recipes>

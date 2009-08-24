@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+<!--All-->
+
+    <provider>
+        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails</selector>
+        <completions>com.rails.find</completions>
+        <complete-match>(find)</complete-match>
+    </provider>
+
+<!--Models-->
+
+    <provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.after</completions>
+        <complete-match>(after)</complete-match>
+    </provider>
+	<provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.filter_before</completions>
+        <complete-match>(before)</complete-match>
+    </provider>
+	<provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.association_has</completions>
+        <complete-match>(has)</complete-match>
+    </provider>
+	<provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.association_belongs</completions>
+        <complete-match>(belo)</complete-match>
+    </provider>
+	<provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.validation</completions>
+        <complete-match>(valid)</complete-match>
+    </provider>
+
+	<provider>
+        <selector>container.class.model</selector>
+        <completions>com.rails.validate</completions>
+        <complete-match>^(\s*def val)</complete-match>
+    </provider>
+
+<!--Controllers-->
+
+	<provider>
+        <selector>container.class.controller</selector>
+        <completions>com.rails.before_filter</completions>
+        <complete-match>(before)</complete-match>
+    </provider>
+	<provider>
+        <selector>container.class.controller</selector>
+        <completions>com.rails.after_filter</completions>
+        <complete-match>(after)</complete-match>
+    </provider>
+
+
+</codesense>

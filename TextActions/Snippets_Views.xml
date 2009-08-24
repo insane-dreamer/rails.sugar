@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <snippet id="actions.snippets.rails.views.render.partial" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.render">
+		<title>render (partial)</title>
+				<text>&lt;%= render :partial => "${1:item}" %></text>
+		<text-trigger>rp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.end" 
+    category="actions.snippets.rails/actions.snippets.rails.views">
+		<title>end</title>
+				<text>
+                &lt;% end %>
+                </text>
+		<text-trigger>end</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    </snippet>
+
+<!--forms-->
+
+    <snippet id="actions.snippets.rails.views.form.form_for" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>form_for</title>
+				<text>
+                &lt;%= form_for @${1:model} do |f| %>
+                      $0
+                &lt;% end %>
+                </text>
+		<text-trigger>ff</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    </snippet>
+
+
+</action-recipes>

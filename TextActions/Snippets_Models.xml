@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<action-recipes>
+    
+<!--  scopes    -->
+    <snippet id="actions.snippets.rails.models.scopes.named_scope" 
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.scopes">
+		<title>named_scope</title>
+				<text>named_scope :${1:name}${2:, :joins => :${3:table}}, :conditions => ${4:['${5:${6:field} = ?}', ${7:true}]}</text>
+		<text-trigger>nc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+    
+    <snippet id="actions.snippets.rails.models.scopes.named_scope_with_lambda"     category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.scopes">
+	<title>named_scope lambda</title>
+			<text>named_scope :${1:name}, lambda { |${2:param}| { :conditions => ${3:['${4:${5:field} = ?}', ${6:$2}]} } }</text>
+	<text-trigger>ncl</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+  
+    <snippet id="actions.snippets.rails.models.scopes.default_scope"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.scopes">
+	<title>default_scope</title>
+			<text>default_scope :${1:order} => ${2:'created_at DESC'}${3:, :joins => :${4:table}}</text>
+	<text-trigger>dc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.scopes.scoped_by"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.scopes">
+	<title>scoped_by</title>
+			<text>scoped_by_${1:attribute}(${2:id})</text>
+	<text-trigger>sb</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+
+<!--associations -->
+
+    <snippet id="actions.snippets.rails.models.associations.belongs_to"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>belongs_to</title>
+			<text>
+            belongs_to :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}
+			</text>
+	<text-trigger>bt</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.habtm"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>has_and_belongs_to_many</title>
+			<text>
+            has_and_belongs_to_many :${1:object}${2:, :join_table => "${3:table_name}", :foreign_key => "${4:${1}_id}"}
+			</text>
+	<text-trigger>habtm</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.has_one"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>has_one</title>
+			<text>
+            has_one :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}
+			</text>
+	<text-trigger>ho</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.has_many"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>has_many</title>
+			<text>
+            has_many :${1:object}s${2:, :class_name => "${1}", :foreign_key => "${4:reference}_id"}
+			</text>
+	<text-trigger>hm</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.has_many_destroy"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>has_many :dependent => :destroy</title>
+			<text>
+            has_many :${1:object}s${2:, :class_name => "${1}", :foreign_key => "${4:reference}_id"}, :dependent => :destroy$0
+			</text>
+	<text-trigger>hmd</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.has_many_through"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>has_many :through</title>
+			<text>
+            has_many :${1:objects}, :through => :${2:join_association}${3:, :source => :${4:${2}_table_foreign_key_to_${1}_table}}
+			</text>
+	<text-trigger>hmt</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.associations.accepts_nested_attributes_for"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+	<title>accepts_nested_attributes_for</title>
+			<text>
+            accepts_nested_attributes_for :${1:association_name}${2:${3:, :allow_destroy => true}${4:, :reject_if => proc { |obj| ${5:obj.blank?} \}}}
+			</text>
+	<text-trigger>anaf</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+
+</action-recipes>

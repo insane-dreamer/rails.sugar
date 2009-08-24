@@ -1,0 +1,31 @@
+<settings>
+ 
+  <language id="name.insane-dreamer.rails">
+    <name>Rails</name>
+    
+    <root-zone>name.insane-dreamer.Espresso.Syntax.Programming.Rails</root-zone>
+    
+    <detectors>
+      <extension casesensitive="false">rb</extension>
+      <extension casesensitive="false">erb</extension>
+      <filename casesensitive="true">Rakefile</filename>
+    </detectors>
+    
+  </language>
+  
+
+  <meta>
+    <name>Ruby on Rails</name>
+    <description>Complements the Ruby sugar, adds Rails functions and snippets. Tries to emulate as much functionality of the TextMate Rails bundles as possible.</description>
+    <author>François Montel</author>
+    <identifier>name.insane-dreamer.Sugar.Ruby.Rails</identifier>
+    <version status="preview">0</version>
+    <download format="git">git://github.com/insane-dreamer/rubyonrails.sugar.git</download>
+    <url>http://github.com/insane-dreamer/rubyonrails.sugar</url>
+    <dependencies>
+      <dependency id="name.elliottcable.Sugar.Regex">Regex</dependency>
+      <dependency id="name.elliottcable.Sugar.Ruby">Ruby</dependency>
+    </dependencies>
+  </meta>
+  
+</settings>
