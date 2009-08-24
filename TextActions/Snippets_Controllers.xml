@@ -167,18 +167,21 @@
 	<title>render (inline, type)</title>
 			<text>render :inline => "${1:&lt;%= 'hello' %>}", :type => ${2::rxml}</text>
 	<text-trigger>rit</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.controllers.render.inline_locals"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
 	<title>render (inline, locals)</title>
 			<text>render :inline => "${1:&lt;%= 'hello' %>}", :locals => { ${2::name} => "${3:value}"$4 }</text>
 	<text-trigger>ril</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.controllers.render.inline_only"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
 	<title>render (inline)</title>
 			<text>render :inline => "${1:&lt;%= 'hello' %>}"</text>
 	<text-trigger>ri</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
     </snippet>
 
 
