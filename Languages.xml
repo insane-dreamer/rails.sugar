@@ -20,8 +20,8 @@
     <author>François Montel</author>
     <identifier>name.insane-dreamer.Sugar.Ruby.Rails</identifier>
     <version status="preview">0</version>
-    <download format="git">git://github.com/insane-dreamer/rubyonrails.sugar.git</download>
-    <url>http://github.com/insane-dreamer/rubyonrails.sugar</url>
+    <download format="git">git://github.com/insane-dreamer/rails.sugar.git</download>
+    <url>http://github.com/insane-dreamer/rails.sugar</url>
     <dependencies>
       <dependency id="name.elliottcable.Sugar.Regex">Regex</dependency>
       <dependency id="name.elliottcable.Sugar.Ruby">Ruby</dependency>
