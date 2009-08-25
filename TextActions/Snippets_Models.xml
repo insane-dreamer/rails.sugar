@@ -93,6 +93,7 @@
             has_many :${1:objects}, :through => :${2:join_association}${3:, :source => :${4:${2}_table_foreign_key_to_${1}_table}}
 			</text>
 	<text-trigger>hmt</text-trigger>
+	<key-equivalent>control shift u</key-equivalent>
     <syntax-context>container.class.model</syntax-context>
     </snippet>
 

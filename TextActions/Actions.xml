@@ -1,22 +1,20 @@
 <?xml version="1.0"?>
 <action-recipes>
 
-<!--Views-->
-
 	<action id="actions.snippets.rails.views.wrap_in_ruby" 
 	    category="actions.snippets.rails">
 		<class>TEAforEspresso</class>
-		<title>Wrap In &lt;%= ... %></title>
+		<title>Wrap Selection In &lt;%= ... %></title>
 		<key-equivalent>control r</key-equivalent>
 		<setup>
 			<action>insert_snippet</action>
+            <selection-context>one</selection-context>
 			<options>
 			    <dict>
 			        <key>default</key>
-			        <string>&lt;%= $SELECTED_TEXT %></string>
-			        
+			        <string>&lt;%= $SELECTED_TEXT %></string>			        
 			        <key>undo_name</key>
-			        <string>Wrap in Ruby (ERB)</string>
+			        <string>Wrap selection in Ruby tags</string>
 			    </dict>
 			</options>
 		</setup>

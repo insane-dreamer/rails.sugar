@@ -7,7 +7,7 @@
 		<title>logger.debug</title>
 				<text>logger.debug { "${1:message}" }$0</text>
 		<text-trigger>logd</text-trigger>
-    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    <syntax-context>container.class.controller, container.class.model, container.class.view</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.logger.info" 
@@ -15,7 +15,7 @@
 		<title>logger.info</title>
 				<text>logger.info { "${1:message}" }$0</text>
 		<text-trigger>logi</text-trigger>
-    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    <syntax-context>container.class.controller, container.class.model, container.class.view</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.logger.warn" 
@@ -23,7 +23,7 @@
 		<title>logger.warn</title>
 				<text>logger.warn { "${1:message}" }$0</text>
 		<text-trigger>logw</text-trigger>
-    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    <syntax-context>container.class.controller, container.class.model, container.class.view</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.logger.error" 
@@ -31,7 +31,7 @@
 		<title>logger.error</title>
 				<text>logger.error { "${1:message}" }$0</text>
 		<text-trigger>loge</text-trigger>
-    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    <syntax-context>container.class.controller, container.class.model, container.class.view</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.logger.fatal" 
@@ -39,7 +39,7 @@
 		<title>logger.fatal</title>
 				<text>logger.fatal { "${1:message}" }$0</text>
 		<text-trigger>logf</text-trigger>
-    <syntax-context>container.class.controller, container.class.model, container.class.layout</syntax-context>
+    <syntax-context>container.class.controller, container.class.model, container.class.view</syntax-context>
     </snippet>
 
 </action-recipes>
