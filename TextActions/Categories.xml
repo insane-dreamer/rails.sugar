@@ -42,11 +42,19 @@
 	<category id="actions.snippets.rails.controllers.render" show="sub">
 		<title>render</title>
 	</category>
+	<category id="actions.snippets.rails.controllers.respond_to" show="sub">
+		<title>respond_to</title>
+	</category>
+	<category id="actions.snippets.rails.controllers.rest" show="sub">
+		<title>REST</title>
+	</category>
+	<category id="actions.snippets.rails.controllers.verify" show="inline separated">
+	</category>
 	
 <!--	Views-->
 	
 	<category id="actions.snippets.rails.views" show="sub">
-		<title>Layouts</title>
+		<title>Views</title>
 	</category>
 	<category id="actions.snippets.rails.views.render" show="sub">
 		<title>render</title>

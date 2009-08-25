@@ -1,6 +1,165 @@
 <?xml version="1.0"?>
 <action-recipes>
 
+
+    <action id="actions.snippets.rails.controllers.flash"     category="actions.snippets.rails/actions.snippets.rails.controllers">
+		<class>TEAforEspresso</class>
+    	<title>flash[...]</title>
+		<key-equivalent>control l</key-equivalent>
+		<setup>
+            <syntax-context>container.class.controller</syntax-context>
+			<action>insert_snippet</action>
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>flash[:${1:notice}] = "${2:Successfully created...}"$0</string>			        
+			        <key>undo_name</key>
+			        <string>flash</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
+	
+    <action id="actions.snippets.rails.params"     category="actions.snippets.rails">
+		<class>TEAforEspresso</class>
+    	<title>params[...]</title>
+		<key-equivalent>control p</key-equivalent>
+		<setup>
+            <syntax-context>container.class.controller</syntax-context>
+			<action>insert_snippet</action>
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>params[:${1:id}]</string>			        
+			        <key>undo_name</key>
+			        <string>params</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
+	
+    <snippet id="actions.snippets.rails.controllers.create_class"
+         category="actions.snippets.rails/actions.snippets.rails.controllers">
+	<title>create controller class</title>
+			<text>
+			<![CDATA[
+class ${1:Model}Controller < ApplicationController
+	before_filter :find_${2:model}
+
+	$0
+
+	private
+	def find_${2}
+		@$2 = ${3:$1}.find(params[:id]) if params[:id]
+	end
+end				
+]]>
+			</text>
+	<text-trigger>cla</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.controllers.create_class_resources"
+         category="actions.snippets.rails/actions.snippets.rails.controllers">
+	<title>create resources controller class</title>
+			<text>
+			<![CDATA[
+class ${1:Model}sController &lt; ApplicationController
+  before_filter :find_${1/./\l$0/}, :only => [:show, :edit, :update, :destroy]
+
+  # GET /${1/./\l$0/}s
+  # GET /${1/./\l$0/}s.xml
+  def index
+    @${1/./\l$0/}s = ${1:Model}.all
+
+    respond_to do |wants|
+      wants.html # index.html.erb
+      wants.xml  { render :xml => @${1/./\l$0/}s }
+    end
+  end
+
+  # GET /${1/./\l$0/}s/1
+  # GET /${1/./\l$0/}s/1.xml
+  def show
+    respond_to do |wants|
+      wants.html # show.html.erb
+      wants.xml  { render :xml => @${1/./\l$0/} }
+    end
+  end
+
+  # GET /${1/./\l$0/}s/new
+  # GET /${1/./\l$0/}s/new.xml
+  def new
+    @${1/./\l$0/} = ${1:Model}.new
+
+    respond_to do |wants|
+      wants.html # new.html.erb
+      wants.xml  { render :xml => @${1/./\l$0/} }
+    end
+  end
+
+  # GET /${1/./\l$0/}s/1/edit
+  def edit
+  end
+
+  # POST /${1/./\l$0/}s
+  # POST /${1/./\l$0/}s.xml
+  def create
+    @${1/./\l$0/} = ${1:Model}.new(params[:${1/./\l$0/}])
+
+    respond_to do |wants|
+      if @${1/./\l$0/}.save
+        flash[:notice] = '${1:Model} was successfully created.'
+        wants.html { redirect_to(@${1/./\l$0/}) }
+        wants.xml  { render :xml => @${1/./\l$0/}, :status => :created, :location => @${1/./\l$0/} }
+      else
+        wants.html { render :action => "new" }
+        wants.xml  { render :xml => @${1/./\l$0/}.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /${1/./\l$0/}s/1
+  # PUT /${1/./\l$0/}s/1.xml
+  def update
+    respond_to do |wants|
+      if @${1/./\l$0/}.update_attributes(params[:${1/./\l$0/}])
+        flash[:notice] = '${1:Model} was successfully updated.'
+        wants.html { redirect_to(@${1/./\l$0/}) }
+        wants.xml  { head :ok }
+      else
+        wants.html { render :action => "edit" }
+        wants.xml  { render :xml => @${1/./\l$0/}.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /${1/./\l$0/}s/1
+  # DELETE /${1/./\l$0/}s/1.xml
+  def destroy
+    @${1/./\l$0/}.destroy
+
+    respond_to do |wants|
+      wants.html { redirect_to(${1/./\l$0/}s_url) }
+      wants.xml  { head :ok }
+    end
+  end
+
+  private
+    def find_${1/./\l$0/}
+      @${1/./\l$0/} = ${1:Model}.find(params[:id])
+    end
+
+end
+]]>
+			</text>
+	<text-trigger>resources</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+
+
+
 <!--    Controllers, redirect_to-->
     <snippet id="actions.snippets.rails.controllers.redirect_to.path"
          category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.redirect_to">
@@ -187,28 +346,97 @@
 
 <!--Controllers, respond_to-->
 
-    <snippet id="actions.snippets.rails.controllers.respond_to"     category="actions.snippets.rails/actions.snippets.rails.controllers">
+    <snippet id="actions.snippets.rails.controllers.respond_to.respond_to"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.respond_to">
 	<title>respond_to</title>
 			<text>
+			<![CDATA[
             respond_to do |wants|
             	wants.${1:html}${2: { $0 \}}
-            end
+            end]]>
             </text>
-	<text-trigger>rest</text-trigger>
+	<text-trigger>respt</text-trigger>
     <syntax-context>container.class.controller</syntax-context>
     </snippet>
 
-    <snippet id="actions.snippets.rails.controllers.respond_to_html"     category="actions.snippets.rails/actions.snippets.rails.controllers">
-	<title>respond_to (html)</title>
-			<text>
+    <action id="actions.snippets.rails.controllers.respond_to.respond_to_html"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.respond_to">
+		<class>TEAforEspresso</class>
+    	<title>respond_to (html)</title>
+		<key-equivalent>shift cmd h</key-equivalent>
+		<setup>
+			<action>insert_snippet</action>
+            <syntax-context>container.class.controller</syntax-context>
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>
+			<![CDATA[
             respond_to do |wants|
             	wants.html do
-            		$TM_SELECTED_TEXT
+            		$SELECTED_TEXT
             	end
             	wants.${1:js} { $0 }
-            end
+            end]]>
+                    </string>			        
+			        <key>undo_name</key>
+			        <string>respond_to (html)</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
+	
+    <snippet id="actions.snippets.rails.controllers.respond_to.wants_format"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.respond_to">
+	<title>wants_format</title>
+			<text>
+            wants.${1:js|xml|html}${2: { $0 \}}
             </text>
-	<text-trigger>resth</text-trigger>
+	<text-trigger>wants</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+    
+    
+<!--    REST resources -->
+
+    <snippet id="actions.snippets.rails.controllers.rest.create"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.rest">
+	<title>def create resource</title>
+			<text>
+			<![CDATA[
+def create
+	@${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}.new(params[:$1])
+	$0
+	respond_to do |wants|
+		if @$1.save
+			flash[:notice] = '$2 was successfully created.'
+			wants.html { redirect_to(@$1) }
+			wants.xml { render :xml => @$1, :status => :created, :location => @$1 }
+		else
+			wants.html { render :action => "new" }
+			wants.xml { render :xml => @$1.errors, :status => :unprocessable_entity }
+		end
+	end
+end
+]]>
+            </text>
+	<text-trigger>defcreate</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+
+<!-- verify-->
+
+    <snippet id="actions.snippets.rails.controllers.verify.render"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.verify">
+	<title>verify - render</title>
+			<text>
+        verify :only => [:$1], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}
+            </text>
+	<text-trigger>vren</text-trigger>
+    <syntax-context>container.class.controller</syntax-context>
+    </snippet>
+    
+    <snippet id="actions.snippets.rails.controllers.verify.redirect"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.verify">
+	<title>verify - redirect</title>
+			<text>
+        verify :only => [:$1], :session => :user, :params => :id, :redirect_to => {:action => '${2:index}'}
+            </text>
+	<text-trigger>vred</text-trigger>
     <syntax-context>container.class.controller</syntax-context>
     </snippet>
 

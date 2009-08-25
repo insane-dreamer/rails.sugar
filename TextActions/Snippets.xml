@@ -1,6 +1,28 @@
 <?xml version="1.0"?>
 <action-recipes>
 
+<!--All-->
+
+    <action id="actions.snippets.rails.session"     category="actions.snippets.rails">
+		<class>TEAforEspresso</class>
+    	<title>session[...]</title>
+		<key-equivalent>control j</key-equivalent>
+		<setup>
+			<action>insert_snippet</action>
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>session[:${1:user}]</string>			        
+			        <key>undo_name</key>
+			        <string>session</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
+	
+
+
+
 <!--Logger-->
     <snippet id="actions.snippets.rails.logger.debug" 
     category="actions.snippets.rails/actions.snippets.rails.logger">
