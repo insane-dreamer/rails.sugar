@@ -25,15 +25,6 @@
     <syntax-context>container.class.model</syntax-context>
     </snippet>
 
-    <snippet id="actions.snippets.rails.models.scopes.scoped_by"     
-    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.scopes">
-	<title>scoped_by</title>
-			<text>scoped_by_${1:attribute}(${2:id})</text>
-	<text-trigger>sb</text-trigger>
-    <syntax-context>container.class.model</syntax-context>
-    </snippet>
-
-
 <!--associations -->
 
     <snippet id="actions.snippets.rails.models.associations.belongs_to"     
@@ -93,17 +84,130 @@
             has_many :${1:objects}, :through => :${2:join_association}${3:, :source => :${4:${2}_table_foreign_key_to_${1}_table}}
 			</text>
 	<text-trigger>hmt</text-trigger>
-	<key-equivalent>control shift u</key-equivalent>
     <syntax-context>container.class.model</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.models.associations.accepts_nested_attributes_for"     
-    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations">
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.associations/actions.snippets.rails.models.associations.nested_attributes">
 	<title>accepts_nested_attributes_for</title>
 			<text>
             accepts_nested_attributes_for :${1:association_name}${2:${3:, :allow_destroy => true}${4:, :reject_if => proc { |obj| ${5:obj.blank?} \}}}
 			</text>
 	<text-trigger>anaf</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+    
+<!-- callbacks -->
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_validation"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_validation</title>
+			<text>before_validation</text>
+	<text-trigger>bfv</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_validation_on_create"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_validation_on_create</title>
+			<text>before_validation_on_create</text>
+	<text-trigger>bfvc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_validation_on_update"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_validation_on_update</title>
+			<text>before_validation_on_update</text>
+	<text-trigger>bfvu</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_validation"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_validation</title>
+			<text>after_validation</text>
+	<text-trigger>afv</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_validation_on_create"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_validation_on_create</title>
+			<text>after_validation_on_create</text>
+	<text-trigger>afvc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_validation_on_update"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_validation_on_update</title>
+			<text>after_validation_on_update</text>
+	<text-trigger>afvu</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_save"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_save</title>
+			<text>before_save</text>
+	<text-trigger>bfs</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_update"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_update</title>
+			<text>before_update</text>
+	<text-trigger>bfu</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_create"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_create</title>
+			<text>before_create</text>
+	<text-trigger>bfc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.before_destroy"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>before_destroy</title>
+			<text>before_destroy</text>
+	<text-trigger>bfd</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_save"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_save</title>
+			<text>after_save</text>
+	<text-trigger>afs</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_update"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_update</title>
+			<text>after_update</text>
+	<text-trigger>afu</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_create"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_create</title>
+			<text>after_create</text>
+	<text-trigger>afc</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.models.callbacks.after_destroy"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.callbacks">
+	<title>after_destroy</title>
+			<text>after_destroy</text>
+	<text-trigger>afd</text-trigger>
     <syntax-context>container.class.model</syntax-context>
     </snippet>
 

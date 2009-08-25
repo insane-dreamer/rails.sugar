@@ -13,15 +13,23 @@
 	<category id="actions.snippets.rails.models" show="sub">
 		<title>Models</title>
 	</category>
-	<category id="actions.snippets.rails.models.associations" show="sub">
-		<title>Associations</title>
-	</category>
 	<category id="actions.snippets.rails.models.scopes" show="sub">
 		<title>Scopes</title>
 	</category>
 	<category id="actions.snippets.rails.models.find" show="sub">
-		<title>Find</title>
+		<title>Finders</title>
 	</category>
+	<category id="actions.snippets.rails.models.find.scopes" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.models.associations" show="sub">
+		<title>Associations</title>
+	</category>
+	<category id="actions.snippets.rails.models.associations.nested_attributes" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.models.callbacks" show="sub">
+		<title>Callbacks</title>
+	</category>
+
 	
 <!--	Controllers-->
 

@@ -60,5 +60,14 @@
 	<text-trigger>fine</text-trigger>
     <syntax-context>container.class.model, container.class.controller</syntax-context>
     </snippet>
+    
+    <snippet id="actions.snippets.rails.models.scopes.scoped_by"     
+    category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find/actions.snippets.rails.models.find.scopes">
+	<title>scoped_by</title>
+			<text>scoped_by_${1:attribute}(${2:id})</text>
+	<text-trigger>sb</text-trigger>
+    <syntax-context>container.class.model</syntax-context>
+    </snippet>
+
 
 </action-recipes>
