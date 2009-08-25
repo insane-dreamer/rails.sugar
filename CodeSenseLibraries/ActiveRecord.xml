@@ -89,6 +89,12 @@
         <completion string="validate_on_update" />
     </set>
     
+    <set name="com.rails.verify">
+        <completion string='verify :only => [:], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}' />
+        <completion string="verify :only => [:], :session => :user, :params => :id, :redirect_to => {:action => 'index'}" />
+    </set>
+
+    
     
     
 </codesense>

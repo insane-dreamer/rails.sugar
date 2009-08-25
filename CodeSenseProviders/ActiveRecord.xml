@@ -55,6 +55,11 @@
         <completions>com.rails.after_filter</completions>
         <complete-match>(after)</complete-match>
     </provider>
+	<provider>
+        <selector>container.class.controller</selector>
+        <completions>com.rails.verify</completions>
+        <complete-match>(verify)</complete-match>
+    </provider>
 
 
 </codesense>
