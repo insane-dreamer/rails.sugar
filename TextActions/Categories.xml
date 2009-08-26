@@ -63,6 +63,13 @@
 		<title>form</title>
 	</category>
 
+<!--Layouts-->
+
+	<category id="actions.snippets.rails.layouts" show="sub">
+		<title>Layouts</title>
+	</category>
+
+
 <!--Routes-->
 
 	<category id="actions.snippets.rails.routes" show="sub">

@@ -6,7 +6,7 @@
 		<title>render (partial)</title>
 				<text>&lt;%= render :partial => "${1:item}" %></text>
 		<text-trigger>rp</text-trigger>
-    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
     </snippet>
 
     <snippet id="actions.snippets.rails.views.end" 
@@ -16,7 +16,7 @@
                 &lt;% end %>
                 </text>
 		<text-trigger>end</text-trigger>
-    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
     </snippet>
 
 <!--forms-->
@@ -30,7 +30,7 @@
                 &lt;% end %>
                 </text>
 		<text-trigger>ff</text-trigger>
-    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>		
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
     </snippet>
 
 

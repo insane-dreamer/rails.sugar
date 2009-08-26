@@ -8,7 +8,7 @@
 		<key-equivalent>control r</key-equivalent>
 		<setup>
 			<action>insert_snippet</action>
-            <selection-context>one</selection-context>
+            <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails, container.class.controller, container.class.model</syntax-context>		
 			<options>
 			    <dict>
 			        <key>default</key>
