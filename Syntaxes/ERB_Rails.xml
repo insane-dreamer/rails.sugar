@@ -1,0 +1,24 @@
+<syntax name="name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails">
+  <zones>
+	  <include collection="embedded.ruby" />
+	  <include syntax="text.html.basic"/>
+      <include syntax="name.elliottcable.Espresso.Syntax.Programming.ERB" />
+  </zones>
+  
+<library>
+        <collection name="embedded.ruby">
+            <zone name="embedded.ruby">
+              <starts-with>
+                <expression>&lt;%</expression>
+              </starts-with>
+              <ends-with>
+                <expression>%&gt;</expression>
+              </ends-with>
+              <subzones>
+                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
+              </subzones> 
+            </zone>
+	  </collection>
+
+</library>   
+</syntax>

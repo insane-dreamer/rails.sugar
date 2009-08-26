@@ -1,14 +1,25 @@
 <settings>
  
   <language id="name.insane-dreamer.rails">
-    <name>Rails</name>
+    <name>Ruby (Rails)</name>
     
     <root-zone>name.insane-dreamer.Espresso.Syntax.Programming.Rails</root-zone>
     
     <detectors>
       <extension casesensitive="false">rb</extension>
-      <extension casesensitive="false">erb</extension>
       <filename casesensitive="true">Rakefile</filename>
+    </detectors>
+    
+  </language>
+
+  <language id="name.insane-dreamer.erb_rails">
+    <name>ERB (Rails)</name>
+    
+    <root-zone>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</root-zone>
+    
+    <detectors>
+      <extension casesensitive="false">erb</extension>
+      <extension casesensitive="false">rhtml</extension>
     </detectors>
     
   </language>
@@ -16,7 +27,7 @@
 
   <meta>
     <name>Ruby on Rails</name>
-    <description>Complements the Ruby sugar, adds Rails functions and snippets. Tries to emulate as much functionality of the TextMate Rails bundles as possible.</description>
+    <description>Complements the Ruby sugar, adds Rails snippets and codesense (for ruby and erb files). Tries to emulate as much functionality of the TextMate Rails bundles as possible.</description>
     <author>François Montel</author>
     <identifier>name.insane-dreamer.Sugar.Ruby.Rails</identifier>
     <version status="preview">0</version>

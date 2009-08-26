@@ -6,11 +6,7 @@
 	  <include collection="container.class.controller" />
 	  <include collection="container.class.model" />
 	  <include collection="container.class.routes" />
-	  <include collection="embedded.ruby" />
-	  <include syntax="text.html.basic"/>
-      <include syntax="name.elliottcable.Espresso.Syntax.Programming.ERB" />
       <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
-      <include syntax="name.insane-dreamer.Espresso.Syntax.Programming.Rails" />
   </zones>
    
   
@@ -38,6 +34,7 @@
             <subzones>
                 <include collection="keyword.control" />
                 <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
             </subzones>
         </zone>
         </collection>
@@ -53,6 +50,7 @@
             <subzones>
                 <include collection="keyword.control" />
                 <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
             </subzones>
         </zone>
 	  </collection>
@@ -60,31 +58,18 @@
         <collection name="container.class.routes">
         <zone name="container.class.routes">
             <starts-with>
-                <expression>(^\s*)(ActionController::Routing::Routes.*$)</expression>
+                <expression>(^\s*)(?=ActionController::Routing::Routes.*$)</expression>
             </starts-with>
             <ends-with>
-                <expression>^end\b</expression>
+                <expression>^\1(?=end)\b</expression>
             </ends-with>
             <subzones>
                 <include collection="keyword.control" />
                 <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
             </subzones>
         </zone>
 	  </collection>
 
-        <collection name="embedded.ruby">
-            <zone name="embedded.ruby">
-              <starts-with>
-                <expression>&lt;%</expression>
-              </starts-with>
-              <ends-with>
-                <expression>%&gt;</expression>
-              </ends-with>
-              <subzones>
-                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
-              </subzones> 
-            </zone>
-	  </collection>
-	
   </library>
 </syntax>
