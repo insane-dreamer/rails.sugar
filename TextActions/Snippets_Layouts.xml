@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <snippet id="actions.snippets.rails.layouts.javascript" 
+    category="actions.snippets.rails/actions.snippets.rails.layouts">
+		<title>javascript_include_tag</title>
+				<text><![CDATA[<%= javascript_include_tag ${1::all}${2:, :cache => ${3:true}} %>]]></text>
+		<text-trigger>jit</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.layouts.stylesheets" 
+    category="actions.snippets.rails/actions.snippets.rails.layouts">
+		<title>stylesheet_link_tag</title>
+				<text><![CDATA[<%= stylesheet_link_tag ${1::all}${2:, :cache => ${3:true}} %>]]></text>
+		<text-trigger>slt</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+</action-recipes>
