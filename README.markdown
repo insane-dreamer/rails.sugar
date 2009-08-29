@@ -12,13 +12,12 @@ _Overall goals:_
 
 **DONE:**
 
-* Snippets for Controllers, Models, Routes, Layouts (based off TextMate RoR bundle)
+* Snippets for Controllers, Models, Routes, Layouts, Views (based off TextMate RoR bundle)
 * CodeSense for AR finders, validations, filters, associations
 
 
 **TODOS:**
 
-* Snippets for Views
 * Snippets for Helpers
 * Snippets for Tests
 * Snippets for Migrations
