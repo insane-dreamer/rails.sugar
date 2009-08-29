@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+
+    <snippet id="actions.snippets.rails.activesupport.cattr_accessor" 
+    category="actions.snippets.rails/actions.snippets.rails.activesupport">
+		<title>cattr_accessor</title>
+				<text>cattr_accessor :${0:attr_names}</text>
+		<text-trigger>crw</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>
+    </snippet>
+
+
+    <snippet id="actions.snippets.rails.activesupport.mattr_accessor"     category="actions.snippets.rails/actions.snippets.rails.activesupport">
+		<title>mattr_accessor</title>
+				<text>mattr_accessor :${0:attr_names}</text>
+		<text-trigger>mrw</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>
+    </snippet>
+
+
+    <snippet id="actions.snippets.rails.activesupport.returning"     category="actions.snippets.rails/actions.snippets.rails.activesupport">
+		<title>returning do |var| end</title>
+				<text>
+<![CDATA[
+returning ${1:variable} do${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1:|)/}
+	$0
+end
+]]>
+</text>
+		<text-trigger>returning</text-trigger>
+    <syntax-context>container.class.controller, container.class.model, name.insane-dreamer.Espresso.Syntax.Programming.Rails</syntax-context>
+    </snippet>
+
+</action-recipes>

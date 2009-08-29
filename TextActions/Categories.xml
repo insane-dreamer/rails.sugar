@@ -10,6 +10,10 @@
 	<category id="actions.snippets.rails.commands" show="inline separated">
 	</category>
 
+	<category id="actions.snippets.rails.activesupport" show="sub">
+		<title>ActiveSupport</title>
+	</category>
+
 <!--Models-->
 
 	<category id="actions.snippets.rails.models" show="sub">
