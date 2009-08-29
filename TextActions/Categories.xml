@@ -7,6 +7,8 @@
 	<category id="actions.snippets.rails.logger" show="sub">
 		<title>Logger</title>
 	</category>
+	<category id="actions.snippets.rails.commands" show="inline separated">
+	</category>
 
 <!--Models-->
 
@@ -56,11 +58,17 @@
 	<category id="actions.snippets.rails.views" show="sub">
 		<title>Views</title>
 	</category>
-	<category id="actions.snippets.rails.views.render" show="sub">
-		<title>render</title>
+	<category id="actions.snippets.rails.views.render" show="inline separated">
 	</category>
-	<category id="actions.snippets.rails.views.form" show="sub">
-		<title>form</title>
+	<category id="actions.snippets.rails.views.form" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.views.form_for" show="sub">
+		<title>form_for</title>
+	</category>
+	<category id="actions.snippets.rails.views.link" show="sub">
+		<title>link_to</title>
+	</category>
+	<category id="actions.snippets.rails.views.other" show="inline separated">
 	</category>
 
 <!--Layouts-->

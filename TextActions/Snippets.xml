@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <action-recipes>
 
+
 <!--All-->
 
-    <action id="actions.snippets.rails.session"     category="actions.snippets.rails">
+    <action id="actions.snippets.rails.commands.session"     category="actions.snippets.rails/actions.snippets.rails.commands">
 		<class>TEAforEspresso</class>
     	<title>session[...]</title>
 		<key-equivalent>control j</key-equivalent>
@@ -21,7 +22,36 @@
 		</setup>
 	</action>
 	
+    <snippet id="actions.snippets.rails.commands.def_end" 
+    category="actions.snippets.rails/actions.snippets.rails.commands">
+		<title>def ... end</title>
+				<text>
+	def ${1:}
+    $0
+  end
+				</text>
+		<text-trigger>def</text-trigger>
+    <syntax-context>container.class.controller, container.class.model</syntax-context>
+    </snippet>
 
+    <action id="actions.snippets.rails.commands.params"     category="actions.snippets.rails/actions.snippets.rails.commands">
+		<class>TEAforEspresso</class>
+    	<title>params[...]</title>
+		<key-equivalent>control p</key-equivalent>
+		<setup>
+            <syntax-context>container.class.controller</syntax-context>
+			<action>insert_snippet</action>
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>params[:${1:id}]</string>			        
+			        <key>undo_name</key>
+			        <string>params</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
+	
 
 
 <!--Logger-->

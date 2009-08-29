@@ -1,37 +1,316 @@
 <?xml version="1.0"?>
 <action-recipes>
 
-    <snippet id="actions.snippets.rails.views.render.partial" 
-    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.render">
-		<title>render (partial)</title>
-				<text>&lt;%= render :partial => "${1:item}" %></text>
-		<text-trigger>rp</text-trigger>
-    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
-    </snippet>
-
-    <snippet id="actions.snippets.rails.views.end" 
-    category="actions.snippets.rails/actions.snippets.rails.views">
-		<title>end</title>
-				<text>
-                &lt;% end %>
-                </text>
-		<text-trigger>end</text-trigger>
-    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
-    </snippet>
-
 <!--forms-->
 
     <snippet id="actions.snippets.rails.views.form.form_for" 
     category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
 		<title>form_for</title>
 				<text>
-                &lt;%= form_for @${1:model} do |f| %>
-                      $0
-                &lt;% end %>
+    &lt;%= form_for @${1:model} do |f| %>
+          $0
+    &lt;% end -%>
                 </text>
 		<text-trigger>ff</text-trigger>
     <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
     </snippet>
+
+    <snippet id="actions.snippets.rails.views.form.form_for_with_errors" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>form_for with errors</title>
+				<text>
+			<![CDATA[
+<%= error_messages_for :${1:model} %>
+
+<%= form_for @${2:$1} do |f| %>
+  $0
+<% end -%>
+  ]]>
+        </text>
+		<text-trigger>ffe</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form.fields" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>fields_for</title>
+				<text>
+			<![CDATA[
+<%= fields_for :${1:model}, @${2:$1} do |$1| %>
+  $0
+<% end -%>
+      ]]>
+        </text>
+		<text-trigger>fields</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form.form_tag" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>form_tag</title>
+				<text>
+			<![CDATA[
+<%= form_tag(${1::action => "${5:update}"}${6:, {:${8:class} => "${9:form}"\}}) do %>
+  $0
+<% end -%>
+      ]]>
+        </text>
+		<text-trigger>ft</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form.submit_tag" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>submit_tag</title>
+				<text><![CDATA[<%= submit_tag "${1:Save changes}"${2:, :id => "${3:submit}"}${4:, :name => "${5:$3}"}${6:, :class => "${7:form_$3}"}${8:, :disabled => ${9:false}}${10:, :disable_with => "${11:Please wait...}"} %>]]>
+        </text>
+		<text-trigger>st</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form.image_submit_tag" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form">
+		<title>image_submit_tag</title>
+				<text><![CDATA[<%= image_submit_tag("${1:agree.png}"${2:${3:, :id => "${4:${1/^(\w+)(\.\w*)?$/$1/}}"}${5:, :name => "${6:${1/^(\w+)(\.\w*)?$/$1/}}"}${7:, :class => "${8:${1/^(\w+)(\.\w*)?$/$1/}-button}"}${9:, :disabled => ${10:false}}}) %>]]>
+        </text>
+		<text-trigger>ist</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+<!--form_for-->
+
+    <snippet id="actions.snippets.rails.views.form_for.fields" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.fields_for</title>
+				<text><![CDATA[
+    <%= f.fields_for :${1:attribute} do |${2:f}|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}
+    	$0
+    %>
+      ]]>
+        </text>
+		<text-trigger>nff</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.label" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.label</title>
+				<text><![CDATA[
+    <%= f.fields_for :${1:attribute} do |${2:f}|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}
+    	$0
+    %>
+      ]]>
+        </text>
+		<text-trigger>ffl</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.text_field" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.text_field</title>
+				<text><![CDATA[<%= f.text_field :${1:attribute}%>]]></text>
+		<text-trigger>fftf</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.text_area" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.text_area</title>
+				<text><![CDATA[<%= f.text_area :${1:attribute}%>]]></text>
+		<text-trigger>ffta</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.check_box" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.check_box</title>
+				<text><![CDATA[<%= f.check_box :${1:attribute}%>]]></text>
+		<text-trigger>ffcb</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.radio_button" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.radio_button</title>
+				<text><![CDATA[<%= f.radio_button :${1:attribute}, :${2:tag_value}%>]]></text>
+		<text-trigger>ffrb</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.password_field" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.password_field</title>
+				<text><![CDATA[<%= f.password_field :${1:attribute}%>]]></text>
+		<text-trigger>ffpf</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.hidden_field" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.hidden_field</title>
+				<text><![CDATA[<%= f.hidden_field :${1:attribute}%>]]></text>
+		<text-trigger>ffhf</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.file_field" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.file_field</title>
+				<text><![CDATA[<%= f.file_field :${1:attribute}%>]]></text>
+		<text-trigger>ffff</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.form_for.submit" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.form_for">
+		<title>f.submit</title>
+				<text><![CDATA[<%= f.submit "${1:Submit}"${2:, :disable_with => '${3:$1ing...}'}%>]]>
+        </text>
+		<text-trigger>ffs</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+
+<!--Other-->
+
+    <snippet id="actions.snippets.rails.views.partial" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.other">
+		<title>render (partial)</title>
+				<text>&lt;%= render :partial => "${1:item}" %></text>
+		<text-trigger>rp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.other.end_erb" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.other">
+		<title>end (erb)</title>
+				<text><![CDATA[<% end -%>]]></text>
+		<text-trigger>end</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.other.map_proc" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.other">
+		<title>map sym_proc</title>
+				<text><![CDATA[map(&:${1:id})]]></text>
+		<text-trigger>mp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.other.content_for" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.other">
+		<title>content_for</title>
+				<text>
+<![CDATA[
+<% content_for :${1:yield_label_in_layout} do -%>
+	$0
+<% end -%>
+]]>
+				</text>
+		<text-trigger>conf</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.other.for_loop" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.other">
+		<title>for loop (erb)</title>
+				<text>
+			<![CDATA[
+    <% if !${1:list}.blank? %>
+      <% for ${2:item} in ${1} %>
+        $3
+      <% end -%>
+    <% else %>
+      $4
+    <% end -%>
+    ]]>
+                </text>
+		<text-trigger>for</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+<!--link_to-->
+
+    <snippet id="actions.snippets.rails.views.link.link_to_path" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (path)</title>
+				<text><![CDATA[<%= link_to ${1:"${2:link text...}"}, ${3:${12:model}_path(${13:@}${14:${12}})}%>]]></text>
+		<text-trigger>lip</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.link_to_path_plural" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (path plural)</title>
+				<text><![CDATA[<%= link_to ${1:"${2:link text...}"}, ${3:${4:model}s_path}%>]]></text>
+		<text-trigger>lipp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.link_to_nested_path" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (nested path)</title>
+				<text><![CDATA[<%= link_to ${1:"${2:link text...}"}, ${3:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}%>]]></text>
+		<text-trigger>linp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.link_to_nested_path_plural" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (nested path plural)</title>
+				<text><![CDATA[<%= link_to ${1:"${2:link text...}"}, ${3:${10:parent}_${11:child}_path(${12:@}${13:${10}})}%>]]></text>
+		<text-trigger>linpp</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.action" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (action)</title>
+				<text><![CDATA[<%= link_to "${1:link text...}", :action => "${2:index}"%>]]></text>
+		<text-trigger>lia</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.action_id" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (action, id)</title>
+				<text><![CDATA[<%= link_to "${1:link text...}", :action => "${2:edit}", :id => ${3:@item}%>]]></text>
+		<text-trigger>liai</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.controller" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (controller)</title>
+				<text><![CDATA[<%= link_to "${1:link text...}", :controller => "${2:items}"%>]]></text>
+		<text-trigger>lic</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.controller_action" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (controller, action)</title>
+				<text><![CDATA[<%= link_to "${1:link text...}", :controller => "${2:items}", :action => "${3:index}"%>]]></text>
+		<text-trigger>lica</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.controller_action_id" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to (controller, action, id)</title>
+				<text><![CDATA[<%= link_to "${1:link text...}", :controller => "${2:items}", :action => "${3:edit}", :id => ${4:@item}%>]]></text>
+		<text-trigger>licai</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.views.link.model" 
+    category="actions.snippets.rails/actions.snippets.rails.views/actions.snippets.rails.views.link">
+		<title>link_to model</title>
+				<text><![CDATA[<%= link_to ${1:model}.${2:name}, ${3:${4:$1}_path(${14:$1})}%>]]></text>
+		<text-trigger>lim</text-trigger>
+    <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>		
+    </snippet>
+
 
 
 </action-recipes>

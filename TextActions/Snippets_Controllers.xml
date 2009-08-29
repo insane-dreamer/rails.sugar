@@ -20,24 +20,6 @@
 		</setup>
 	</action>
 	
-    <action id="actions.snippets.rails.params"     category="actions.snippets.rails">
-		<class>TEAforEspresso</class>
-    	<title>params[...]</title>
-		<key-equivalent>control p</key-equivalent>
-		<setup>
-            <syntax-context>container.class.controller</syntax-context>
-			<action>insert_snippet</action>
-			<options>
-			    <dict>
-			        <key>default</key>
-			        <string>params[:${1:id}]</string>			        
-			        <key>undo_name</key>
-			        <string>params</string>
-			    </dict>
-			</options>
-		</setup>
-	</action>
-	
     <snippet id="actions.snippets.rails.controllers.create_class"
          category="actions.snippets.rails/actions.snippets.rails.controllers">
 	<title>create controller class</title>
@@ -314,9 +296,9 @@ end
     <snippet id="actions.snippets.rails.controllers.render.update"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.render">
 	<title>render (update)</title>
 			<text>
-			render :update do |${2:page}|
-            	$2.$0
-            end
+  render :update do |${2:page}|
+        	$2.$0
+  end
             </text>
 	<text-trigger>ru</text-trigger>
     <syntax-context>container.class.controller</syntax-context>
@@ -350,9 +332,10 @@ end
 	<title>respond_to</title>
 			<text>
 			<![CDATA[
-            respond_to do |wants|
-            	wants.${1:html}${2: { $0 \}}
-            end]]>
+        respond_to do |wants|
+        	wants.${1:html}${2: { $0 \}}
+        end
+        ]]>
             </text>
 	<text-trigger>respt</text-trigger>
     <syntax-context>container.class.controller</syntax-context>
@@ -370,12 +353,13 @@ end
 			        <key>default</key>
 			        <string>
 			<![CDATA[
-            respond_to do |wants|
-            	wants.html do
-            		$SELECTED_TEXT
-            	end
-            	wants.${1:js} { $0 }
-            end]]>
+        respond_to do |wants|
+        	wants.html do
+        		$SELECTED_TEXT
+        	end
+        	wants.${1:js} { $0 }
+        end
+            ]]>
                     </string>			        
 			        <key>undo_name</key>
 			        <string>respond_to (html)</string>

@@ -2,7 +2,7 @@
 <action-recipes>
 
 	<action id="actions.snippets.rails.views.wrap_in_ruby" 
-	    category="actions.snippets.rails">
+	    category="actions.snippets.rails/actions.snippets.rails.commands">
 		<class>TEAforEspresso</class>
 		<title>Wrap Selection In &lt;%= ... %></title>
 		<key-equivalent>control r</key-equivalent>
@@ -12,7 +12,7 @@
 			<options>
 			    <dict>
 			        <key>default</key>
-			        <string>&lt;%= $SELECTED_TEXT %></string>			        
+			        <string>&lt;%= ${1:$SELECTED_TEXT} %></string>			        
 			        <key>undo_name</key>
 			        <string>Wrap selection in Ruby tags</string>
 			    </dict>
@@ -20,5 +20,23 @@
 		</setup>
 	</action>
 	
+	<action id="actions.snippets.rails.views.wrap_in_link_to" 
+	    category="actions.snippets.rails/actions.snippets.rails.views">
+		<class>TEAforEspresso</class>
+		<title>Wrap selection in link_to</title>
+		<key-equivalent>shift option control l</key-equivalent>
+		<setup>
+			<action>insert_snippet</action>
+            <syntax-context>name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails</syntax-context>	
+			<options>
+			    <dict>
+			        <key>default</key>
+			        <string>&lt;%= link_to(${1:$SELECTED_TEXT}, ${2:model}_path, :id => @${2:model}, {:class => "$0"}) %></string>			        
+			        <key>undo_name</key>
+			        <string>Wrap selection in link_to tag</string>
+			    </dict>
+			</options>
+		</setup>
+	</action>
 
 </action-recipes>
