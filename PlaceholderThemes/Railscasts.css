@@ -1,0 +1,106 @@
+/*
+	@theme Railscasts
+	@override-placeholders ruby, css
+  @author Ported by Xac Stegner from Ryan Bates' Railscasts TextMate theme
+*/
+
+@base {
+	color: #ddd;
+	background-color: #222;
+	insertion-point-color: #fff;
+	selection-background-color: #50586F;
+}
+
+/* CSS */
+
+css property-name { color: rgba(112, 155, 190, 1.00); }
+css property-value { color: rgba(164, 194, 97, 1.00); }
+css { spell-check: disabled; }
+css.selector, css.selector > entity > punctuation { color: rgba(251, 199, 111, 1.00); }
+css keyword.important { color: rgba(200, 121, 54, 1.00); }
+css numeric { color: rgba(164, 194, 97, 1.00);}
+css zunit { color: rgba(200, 121, 54, 1.00); }
+css rgb-value { color: rgba(112, 155, 190, 1.00); }
+css.at-rule string, css.at-rule string punctuation, media.css > block > punctuation, property-list.css > property-value > punctuation { color: #fff; }
+keyword.important.css { color: rgba(200, 121, 54, 1.00); }
+
+/* Ruby */
+
+metadata { color: rgba(255, 0, 0, 1.00); }
+metadata.comment { color: rgba(186, 149, 89, 1.00); }
+
+string.interpolation { color: rgba(83, 158, 79, 1.00); }
+
+keyword.control, keyword.control.active_record { color: rgba(200, 121, 54, 1.00); }
+
+literal { color: rgba(112, 155, 190, 1.00); }
+literal.numeric { color: rgba(164, 194, 97, 1.00); }
+literal.string { color: rgba(164, 194, 97, 1.00); }
+literal.keyword { color: rgba(112, 155, 190, 1.00); }
+literal.symbol { color: rgba(112, 155, 190, 1.00); }
+literal.escape { color: rgba(83, 158, 79, 1.00); }
+
+operator, keyword.operator { color: rgba(200, 121, 54, 1.00); }
+
+container.block { color: rgba(255, 0, 0, 1.00); }
+container.function { color: rgba(251, 199, 111, 1.00); }
+/*container.function.parenthesis-delimited { color: rgba(255, 255, 255, 1.00); }*/
+identifier.variable.parameter { color: rgba(255, 255, 255, 1.00); }
+
+identifier { color: rgba(200, 121, 54, 1.00); }
+identifier.variable { color: rgba(209, 208, 255, 1.00); }
+identifier.variable.instance { color: rgba(209, 208, 255, 1.00); }
+identifier.variable.local { color: rgba(255, 255, 255, 1.00); }
+identifier.variable.constant { color: rgba(214, 72, 62, 1.00); }
+
+keyword { color: rgba(200, 121, 54, 1.00); }
+
+delimiter { color: rgba(255, 255, 255, 1.00); }
+
+/* XML */
+
+tag, source, sourcecode {
+	spell-check: disabled;
+}
+
+tag, tag > string > punctuation {
+	oldcolor: #8FCFFF;
+	lessoldcolor: #9FDFFF;
+	color: #5FAFEF;
+}
+
+tag > name, tag > string.quoted - punctuation, attribute-with-value > string.quoted - punctuation {
+	oldcolor: #2F5F7F;
+}
+
+tag>name {
+	color: #89BDFF;
+}
+
+attribute-name, punctuation.definition.tag {
+	color: #89BDFF;
+	newcolor: #6FBFFF;
+}
+
+tag > string.quoted, tag > attribute-with-value > string.quoted {
+	color: #f7bdfd;
+}
+
+tag > string > punctuation {
+	font-weight: normal;
+}
+
+css.embedded attribute-name, css.embedded punctuation.definition.tag {
+	color: #fc9218;
+}
+
+comment, comment>punctuation, tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
+	color: #AEAEAE;
+	font-style: italic;
+}
+
+tag.h1, tag.h1 * {
+	font-weight: bold;
+	color: #000000;
+}
+
