@@ -6,7 +6,9 @@
 	  <include collection="container.class.controller" />
 	  <include collection="container.class.model" />
 	  <include collection="container.class.routes" />
-      <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
+	  <include collection="container.class.test_unit" />
+	  <include collection="container.class.test_functional" />
+	  <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
   </zones>
    
   
@@ -39,6 +41,38 @@
         </zone>
         </collection>
 
+    	  <collection name="container.class.test_functional">
+    		<zone name="container.class.test_functional">
+            <starts-with>
+            <expression>(^\s*)(?=class\s+.+ActionController::TestCase)</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^\1(?=end)\b</expression>
+            </ends-with>
+            <subzones>
+                <include collection="keyword.control" />
+                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
+            </subzones>
+        </zone>
+        </collection>
+
+  	  <collection name="container.class.test_unit">
+    		<zone name="container.class.test_unit">
+            <starts-with>
+            <expression>(^\s*)(class\s+.+ActiveSupport::TestCase)</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^\1(?=end)\b</expression>
+            </ends-with>
+            <subzones>
+                <include collection="keyword.control" />
+                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
+            </subzones>
+        </zone>
+        </collection>
+
         <collection name="container.class.model">
         <zone name="container.class.model">
             <starts-with>
@@ -55,6 +89,22 @@
         </zone>
 	  </collection>
 	
+        <collection name="container.class.routes">
+        <zone name="container.class.routes">
+            <starts-with>
+                <expression>(^\s*)(?=ActionController::Routing::Routes.*$)</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^\1(?=end)\b</expression>
+            </ends-with>
+            <subzones>
+                <include collection="keyword.control" />
+                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
+            </subzones>
+        </zone>
+	  </collection>
+
         <collection name="container.class.routes">
         <zone name="container.class.routes">
             <starts-with>
