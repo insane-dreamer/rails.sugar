@@ -88,4 +88,14 @@
 		<title>Routes</title>
 	</category>
 
+<!--Tests-->
+
+	<category id="actions.snippets.rails.tests" show="sub">
+		<title>Tests</title>
+	</category>
+	<category id="actions.snippets.rails.tests.unit" show="inline separated">
+	</category>
+
+
+
 </action-categories>

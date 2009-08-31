@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <snippet id="actions.snippets.rails.tests.assert_diff" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
+		<title>assert_difference</title>
+				<text>
+assert_difference "${1:Model}.${2:count}", ${3:1} do
+  $0
+end
+                </text>
+		<text-trigger>asd</text-trigger>
+    <syntax-context>container.class.test_unit</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.assert_no_diff" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
+		<title>assert_no_difference</title>
+				<text>
+assert_no_difference "${1:Model}.${2:count}" do
+  $0
+end
+                </text>
+		<text-trigger>asnd</text-trigger>
+    <syntax-context>container.class.test_unit</syntax-context>		
+    </snippet>
+
+
+</action-recipes>
+
