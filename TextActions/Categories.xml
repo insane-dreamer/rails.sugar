@@ -88,14 +88,20 @@
 		<title>Routes</title>
 	</category>
 
-<!--Tests-->
+<!--Tests/Functional-->
 
 	<category id="actions.snippets.rails.tests" show="sub">
 		<title>Tests</title>
 	</category>
 	<category id="actions.snippets.rails.tests.unit" show="inline separated">
 	</category>
-
-
+	<category id="actions.snippets.rails.tests.functional" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.tests.assert" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.tests.dom" show="inline separated">
+	</category>
+	<category id="actions.snippets.rails.tests.ajax" show="inline separated">
+	</category>
 
 </action-categories>

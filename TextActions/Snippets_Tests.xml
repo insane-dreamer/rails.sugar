@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <action-recipes>
 
+<!--Unit -->
+
     <snippet id="actions.snippets.rails.tests.assert_diff" 
     category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
 		<title>assert_difference</title>
@@ -10,7 +12,7 @@ assert_difference "${1:Model}.${2:count}", ${3:1} do
 end
                 </text>
 		<text-trigger>asd</text-trigger>
-    <syntax-context>container.class.test_unit</syntax-context>		
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
     </snippet>
 
     <snippet id="actions.snippets.rails.tests.assert_no_diff" 
@@ -22,8 +24,215 @@ assert_no_difference "${1:Model}.${2:count}" do
 end
                 </text>
 		<text-trigger>asnd</text-trigger>
-    <syntax-context>container.class.test_unit</syntax-context>		
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
     </snippet>
+
+    <snippet id="actions.snippets.rails.tests.assert_equal" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
+		<title>assert_equal</title>
+				<text>assert_equal $1, $0</text>
+		<text-trigger>ase</text-trigger>
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.assert_not_equal" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
+		<title>assert_not_equal</title>
+				<text>assert_not_equal $1, $0</text>
+		<text-trigger>asne</text-trigger>
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.assert_not_nil" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.unit">
+		<title>assert_not_nil</title>
+				<text>assert_not_nil $0</text>
+		<text-trigger>asnn</text-trigger>
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
+    </snippet>
+
+
+<!-- Asserts -->
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_response" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_response</title>
+				<text>assert_response :${1:success}, @response.body$0</text>
+		<text-trigger>asre</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_redirected_to" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_redirected_to</title>
+				<text>assert_redirected_to ${2::action => "${1:index}"}</text>
+		<text-trigger>art</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_redirected_to_path" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_redirected_to (path)</title>
+				<text>assert_redirected_to ${2:${12:model}_path(${13:@}${14:${12}})}</text>
+		<text-trigger>artp</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_redirected_to_path_plural" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_redirected_to (path plural)</title>
+				<text>assert_redirected_to ${10:${2:model}s_path}</text>
+		<text-trigger>artpp</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_redirected_to_nested_path" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_redirected_to (nested path)</title>
+				<text>assert_redirected_to ${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}</text>
+		<text-trigger>artnp</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_redirected_to_path" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_redirected_to (nested path plural)</title>
+				<text>assert_redirected_to ${10:${2:parent}_${3:child}_path(${4:@}${5:${2}})}</text>
+		<text-trigger>artnpp</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_select" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.dom">
+		<title>assert_select</title>
+				<text>
+assert_select '${1:path}'${2:, :${3:text} => ${4:'${5:inner_html}'}}${6: do
+	$0
+end}
+        </text>
+		<text-trigger>ass</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_assigns" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>def assert(var = assigns(:var))</title>
+				<text>
+assert(${1:var} = assigns(:${1}), "Cannot find @${1}")
+$0
+      </text>
+		<text-trigger>asg</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_rjs" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.assert">
+		<title>assert_rjs</title>
+				<text>assert_rjs :${1:replace}, ${2:"${3:dom id}"}</text>
+		<text-trigger>asrj</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_dom_equal" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.dom">
+		<title>assert_dom_equal</title>
+				<text>assert_dom_equal $1, $2, "$0"</text>
+		<text-trigger>ade</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_dom_not_equal" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.dom">
+		<title>assert_dom_not_equal</title>
+				<text>assert_dom_not_equal $1, $2, "$0"</text>
+		<text-trigger>adne</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_tag" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.dom">
+		<title>assert_tag</title>
+				<text>assert_tag :tag => "$1", :attributes => {$2}, :content => $0</text>
+		<text-trigger>at</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.assert_no_tag" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.dom">
+		<title>assert_no_tag</title>
+				<text>assert_no_tag :tag => "$1", :attributes => {$2}, :content => $0</text>
+		<text-trigger>ant</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+
+<!-- Ajax -->
+ 
+    <snippet id="actions.snippets.rails.tests.functional.xhr_get" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.ajax">
+		<title>xhr get</title>
+				<text>xhr :get, :${1:show}${2:, :id => ${3:1}}$0</text>
+		<text-trigger>xget</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+ 
+    <snippet id="actions.snippets.rails.tests.functional.xhr_post" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.ajax">
+		<title>xhr post</title>
+				<text>xhr :post, :${1:create}, :${2:object} => { $3 }</text>
+		<text-trigger>xpost</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+ 
+    <snippet id="actions.snippets.rails.tests.functional.xhr_put" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.ajax">
+		<title>xhr put</title>
+				<text>xhr :put, :${1:update}, :id => ${2:1}, :${3:object} => { $4 }$0</text>
+		<text-trigger>xput</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+ 
+    <snippet id="actions.snippets.rails.tests.functional.xhr_delete" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.ajax">
+		<title>xhr delete</title>
+				<text>xhr :delete, :${1:destroy}, :id => ${2:1}$0</text>
+		<text-trigger>xdelete</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+  
+
+<!-- Functional -->
+
+
+    <snippet id="actions.snippets.rails.tests.functional.get_action" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.functional">
+		<title>def test_should_get_action</title>
+				<text>
+def test_should_get_${1:action}
+	${2:@${3:model} = ${4:$3s}(:${5:fixture_name})
+	}get :${1}${6:, :id => @$3.to_param}
+	assert_response :success
+	$0
+end
+      </text>
+		<text-trigger>deftg</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+    <snippet id="actions.snippets.rails.tests.functional.post_action" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.functional">
+		<title>def test_should_post_action</title>
+				<text>
+def test_should_post_${1:action}
+	${3:@$2 = ${4:$2s}(:${5:fixture_name})
+	}post :${1}${6:, :id => @$2.to_param}, :${2:model} => { $0 }
+	assert_response :redirect
+end
+      </text>
+		<text-trigger>deftp</text-trigger>
+    <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
 
 
 </action-recipes>

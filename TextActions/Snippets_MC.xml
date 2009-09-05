@@ -38,12 +38,12 @@
     <snippet id="actions.snippets.rails.models.find.in_batches"     
     category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
 	<title>find_in_batches</title>
-			<text>
-                find_in_batches(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}s|
-                	$4s.each do |$4|
-                		$0
-                	end
-                end
+			<text><![CDATA[
+find_in_batches(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${$5/(\w+)\./\L$1/g}}s|
+	$4s.each do |$4|
+		$0
+	end
+end]]>
 			</text>
 	<text-trigger>finb</text-trigger>
     <syntax-context>container.class.model, container.class.controller</syntax-context>
@@ -52,10 +52,10 @@
     <snippet id="actions.snippets.rails.models.find.each"     
     category="actions.snippets.rails/actions.snippets.rails.models/actions.snippets.rails.models.find">
 	<title>find_each</title>
-			<text>
-            find_each(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}|
-            	$0
-            end			
+			<text><![CDATA[
+find_each(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${$5/(\w+)\./\L$1/g}}|
+	$0
+end]]>
 			</text>
 	<text-trigger>fine</text-trigger>
     <syntax-context>container.class.model, container.class.controller</syntax-context>
