@@ -7,6 +7,7 @@ _Overall goals:_
 * Actions (switching between Controller, Model and View, etc.)
 
 
+
 ------------------
 
 
@@ -24,10 +25,19 @@ _Overall goals:_
 * CodeSense for ActiveSupport
 * CodeSense for ActionPack
 * Snippets/Codesense for Shoulda (probably as a separate sugar)
+
+
+**WISHLIST:**
+
+_These can't be implemented currently because Espresso doesn't have the API hooks needed to trigger file 
+operations that would allow switching between M, V and C, running tests, etc. I'm hoping those will get added
+at which time, hopefully the below could be implemented._
+
 * File actions (switch between M, V and C)
+* Run tests. 
 * Git support (probably as a separate sugar)
-* Run tests, etc. (separate sugar?)
 * Find in project (hopefully implemented by MacRabbit in the core)
+
 
 
 --------------------
