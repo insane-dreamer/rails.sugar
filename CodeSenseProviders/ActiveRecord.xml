@@ -2,53 +2,20 @@
 <codesense>
 
 <!--All-->
+    <provider>
+      <selector>container.class.*</selector>
+      <completions>com.rails.activerecord.base.public_methods</completions>
+  		<complete-match>[a-z]\w*?</complete-match>
+    </provider>
+
+<!--Models only-->
 
     <provider>
-        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails, container.class.model, container.class.controller</selector>
-        <completions>com.rails.find</completions>
-        <complete-match>(find)</complete-match>
-    </provider>
-
-<!--Models-->
-
-    <provider>
-        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails, container.class.controller, container.class.model</selector>
-        <completions>com.rails.after</completions>
-        <complete-match>(after)</complete-match>
-    </provider>
-	<provider>
-        <selector>name.insane-dreamer.Espresso.Syntax.Programming.Rails, container.class.controller, container.class.model</selector>
-        <completions>com.rails.filter_before</completions>
-        <complete-match>(before)</complete-match>
-    </provider>
-	<provider>
-        <selector>container.class.model</selector>
-        <completions>com.rails.association_has</completions>
-        <complete-match>(has)</complete-match>
-    </provider>
-	<provider>
-        <selector>container.class.model</selector>
-        <completions>com.rails.association_belongs</completions>
-        <complete-match>(belo)</complete-match>
-    </provider>
-	<provider>
-        <selector>container.class.model</selector>
-        <completions>com.rails.validation</completions>
-        <complete-match>(valid)</complete-match>
-    </provider>
-
-	<provider>
-        <selector>container.class.model</selector>
-        <completions>com.rails.validate</completions>
-        <complete-match>^(\s*def val)</complete-match>
-    </provider>
-
-<!--Controllers-->
-
-	<provider>
-        <selector>container.class.controller</selector>
-        <completions>com.rails.verify</completions>
-        <complete-match>(verify)</complete-match>
+      <selector>container.class.model</selector>
+      <completions>com.rails.ar.associations</completions>
+      <completions>com.rails.ar.callbacks</completions>
+      <completions>com.rails.ar.validations</completions>
+  		<complete-match>[a-z]\w*</complete-match>
     </provider>
 
 

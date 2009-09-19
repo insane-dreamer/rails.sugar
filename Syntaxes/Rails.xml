@@ -105,10 +105,10 @@
         </zone>
 	  </collection>
 
-        <collection name="container.class.routes">
-        <zone name="container.class.routes">
+        <collection name="container.class.helpers">
+        <zone name="container.class.helpers">
             <starts-with>
-                <expression>(^\s*)(?=ActionController::Routing::Routes.*$)</expression>
+                <expression>(^\s*)(?=module [A-Z].*?Helper\s*$)</expression>
             </starts-with>
             <ends-with>
                 <expression>^\1(?=end)\b</expression>

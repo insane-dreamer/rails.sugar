@@ -1,88 +1,433 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense version="1.0">
-    
-    <set name="com.rails.find">
-        <completion string="find_by_" />
-        <completion string="find_all_by_" />
-		<completion string="find_or_create_by_" />
-		<completion string="find_or_initialize_by_" />
-    </set>
-
-    <set name="com.rails.after">
-        <behavior>
-            <append-static>  :${1:}</append-static>
-        </behavior>
-        <completion string="after_filter" />
-        <completion string="after_create" />
-		<completion string="after_destroy" />
-		<completion string="after_save" />
-		<completion string="after_update" />
-		<completion string="after_validation" />
-		<completion string="after_validation_on_create" />
-		<completion string="after_validation_on_update" />
-    </set>
-
-    <set name="com.rails.before">
-        <behavior>
-            <append-static>  :${1:}</append-static>
-        </behavior>
-        <completion string="before_filter" />
-        <completion string="before_create" />
-		<completion string="before_destroy" />
-		<completion string="before_save" />
-		<completion string="before_update" />
-		<completion string="before_validation" />
-		<completion string="before_validation_on_create" />
-		<completion string="before_validation_on_update" />
-    </set>
-
-    <set name="com.rails.association_has">
-        <behavior>
-            <append-static>  :${1:}</append-static>
-        </behavior>
-        <completion string="has_one" />
-        <completion string="has_many" />
-        <completion string="has_and_belongs_to_many" />
-        <completion string="has_many :through =>" />
-    </set>
-    
-    <set name="com.rails.association_belongs">
-        <behavior>
-            <append-static>  :${1:}</append-static>
-        </behavior>
-        <completion string="belongs_to" />
-    </set>
-    
-    <set name="com.rails.validation">
-        <behavior>
-            <append-static>  :${1:}</append-static>
-        </behavior>
-        <completion string="validates_acceptance_of" />
-        <completion string="validates_associated" />
-        <completion string="validates_confirmation_of" />
-        <completion string="validates_each" />
-        <completion string="validates_exclusion_of" />
-        <completion string="validates_format_of" />
-        <completion string="validates_inclusion_of" />
-        <completion string="validates_length_of" />
-        <completion string="validates_numericality_of" />
-        <completion string="validates_presence_of" />
-        <completion string="validates_size_of" />
-        <completion string="validates_uniqueness_of" />
-    </set>
-
-    <set name="com.rails.validate">
-        <completion string="validate" />
-        <completion string="validate_on_create" />
-        <completion string="validate_on_update" />
-    </set>
-    
-    <set name="com.rails.verify">
-        <completion string='verify :only => [:], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}' />
-        <completion string="verify :only => [:], :session => :user, :params => :id, :redirect_to => {:action => 'index'}" />
-    </set>
 
     
-    
+    <set name="com.rails.ar.associations">
+      <behavior>
+          <append-static>  :${1:model}</append-static>
+      </behavior>
+      <completion string="composed_of" />
+      <completion string="has_one" />
+      <completion string="has_many" />
+      <completion string="has_and_belongs_to_many" />
+      <completion string="has_many :through =>" />
+      <completion string="belongs_to" />
+    </set>
+        
+    <set name="com.rails.ar.callbacks">
+      <behavior>
+          <append-static>  :${1:method}</append-static>
+      </behavior>
+      <completion string="after_create" />
+      <completion string="after_destroy" />
+      <completion string="after_initialize" />
+      <completion string="after_save" />
+      <completion string="after_update" />
+      <completion string="after_validation" />
+      <completion string="after_validation_on_create" />
+      <completion string="after_validation_on_update" />
+
+      <completion string="before_create" />
+      <completion string="before_destroy" />
+      <completion string="before_save" />
+      <completion string="before_update" />
+      <completion string="before_validation" />
+      <completion string="before_validation_on_create" />
+      <completion string="before_validation_on_update" />
+    </set>
+
+    <set name="com.rails.ar.validations">
+      <behavior>
+          <append-static>  :${1:attribute}</append-static>
+      </behavior>
+      <completion string="validate" />
+      <completion string="validate_on_create" />
+      <completion string="validate_on_update" />
+      <completion string="validates_acceptance_of" />
+      <completion string="validates_associated" />
+      <completion string="validates_confirmation_of" />
+      <completion string="validates_each" />
+      <completion string="validates_exclusion_of" />
+      <completion string="validates_format_of" />
+      <completion string="validates_inclusion_of" />
+      <completion string="validates_length_of" />
+      <completion string="validates_numericality_of" />
+      <completion string="validates_presence_of" />
+      <completion string="validates_size_of" />
+      <completion string="validates_uniqueness_of" />
+    </set>
+
+
+    <set name="com.rails.activerecord.base.public_methods">
+      <completion string="abstract_class" />
+      <completion string="abstract_class=" />
+      <completion string="abstract_class?" />
+      <completion string="accepts_nested_attributes_for" />
+      <completion string="accessible_attributes" />
+      <completion string="acts_like?" />
+      <completion string="add_observer" />
+      <completion string="alias_attribute" />
+      <completion string="alias_attribute_with_dirty" />
+      <completion string="alias_attribute_without_dirty" />
+      <completion string="alias_method_chain" />
+      <completion string="all" />
+      <completion string="allocate" />
+      <completion string="allow_concurrency" />
+      <completion string="allow_concurrency=" />
+      <completion string="ancestors" />
+      <completion string="as_json" />
+      <completion string="as_load_path" />
+      <completion string="attr_accessible" />
+      <completion string="attr_accessor_with_default" />
+      <completion string="attr_internal" />
+      <completion string="attr_internal_accessor" />
+      <completion string="attr_internal_naming_format" />
+      <completion string="attr_internal_naming_format=" />
+      <completion string="attr_internal_reader" />
+      <completion string="attr_internal_writer" />
+      <completion string="attr_protected" />
+      <completion string="attr_readonly" />
+      <completion string="attribute_method_suffix" />
+      <completion string="attribute_types_cached_by_default" />
+      <completion string="attribute_types_cached_by_default=" />
+      <completion string="autoload" />
+      <completion string="autoload?" />
+      <completion string="average" />
+      <completion string="b64encode" />
+      <completion string="base_class" />
+      <completion string="benchmark" />
+      <completion string="blank?" />
+      <completion string="breakpoint" />
+      <completion string="cache" />
+      <completion string="cache_attribute?" />
+      <completion string="cache_attributes" />
+      <completion string="cached_attributes" />
+      <completion string="calculate" />
+      <completion string="cattr_accessor" />
+      <completion string="cattr_reader" />
+      <completion string="cattr_writer" />
+      <completion string="changed" />
+      <completion string="changed?" />
+      <completion string="class" />
+      <completion string="class_eval" />
+      <completion string="class_exec" />
+      <completion string="class_inheritable_accessor" />
+      <completion string="class_inheritable_array" />
+      <completion string="class_inheritable_array_writer" />
+      <completion string="class_inheritable_hash" />
+      <completion string="class_inheritable_hash_writer" />
+      <completion string="class_inheritable_reader" />
+      <completion string="class_inheritable_writer" />
+      <completion string="class_name" />
+      <completion string="class_variable_defined?" />
+      <completion string="class_variables" />
+      <completion string="clear_active_connections!" />
+      <completion string="clear_all_connections!" />
+      <completion string="clear_reloadable_connections!" />
+      <completion string="clone" />
+      <completion string="colorize_logging" />
+      <completion string="colorize_logging=" />
+      <completion string="column_methods_hash" />
+      <completion string="column_names" />
+      <completion string="columns" />
+      <completion string="columns_hash" />
+      <completion string="composed_of" />
+      <completion string="configurations" />
+      <completion string="configurations=" />
+      <completion string="connected?" />
+      <completion string="connection" />
+      <completion string="connection_handler" />
+      <completion string="connection_handler=" />
+      <completion string="connection_pool" />
+      <completion string="const_defined?" />
+      <completion string="const_get" />
+      <completion string="const_missing" />
+      <completion string="const_missing_with_dependencies" />
+      <completion string="const_missing_without_dependencies" />
+      <completion string="const_set" />
+      <completion string="constants" />
+      <completion string="content_columns" />
+      <completion string="copy_instance_variables_from" />
+      <completion string="count" />
+      <completion string="count_by_sql" />
+      <completion string="count_observers" />
+      <completion string="create" />
+      <completion string="create!" />
+      <completion string="create_reflection" />
+      <completion string="daemonize" />
+      <completion string="dclone" />
+      <completion string="debugger" />
+      <completion string="decode64" />
+      <completion string="decode_b" />
+      <completion string="decrement_counter" />
+      <completion string="default_scoping" />
+      <completion string="default_scoping=" />
+      <completion string="default_timezone" />
+      <completion string="default_timezone=" />
+      <completion string="define_attribute_methods" />
+      <completion string="define_callbacks" />
+      <completion string="define_read_methods" />
+      <completion string="delegate" />
+      <completion string="delete" />
+      <completion string="delete_all" />
+      <completion string="delete_observer" />
+      <completion string="delete_observers" />
+      <completion string="deprecate" />
+      <completion string="deprecated_method_warning" />
+      <completion string="deprecation_horizon" />
+      <completion string="descends_from_active_record?" />
+      <completion string="destroy" />
+      <completion string="destroy_all" />
+      <completion string="display" />
+      <completion string="dup" />
+      <completion string="duplicable?" />
+      <completion string="enable_warnings" />
+      <completion string="encode64" />
+      <completion string="enum_for" />
+      <completion string="eql?" />
+      <completion string="equal?" />
+      <completion string="establish_connection" />
+      <completion string="exists?" />
+      <completion string="extend" />
+      <completion string="extend_with_included_modules_from" />
+      <completion string="extended_by" />
+      <completion string="find" />
+      <completion string="find_by" />
+      <completion string="find_all_by" />
+      <completion string="find_by_sql" />
+      <completion string="find_each" />
+      <completion string="find_hidden_method" />
+      <completion string="find_in_batches" />
+      <completion string="finder_needs_type_condition?" />
+      <completion string="first" />
+      <completion string="freeze" />
+      <completion string="frozen?" />
+      <completion string="generated_methods" />
+      <completion string="generated_methods?" />
+      <completion string="get_primary_key" />
+      <completion string="hash" />
+      <completion string="human_attribute_name" />
+      <completion string="human_name" />
+      <completion string="id" />
+      <completion string="include?" />
+      <completion string="include_root_in_json" />
+      <completion string="include_root_in_json=" />
+      <completion string="included_in_classes" />
+      <completion string="included_modules" />
+      <completion string="increment_counter" />
+      <completion string="inheritable_attributes" />
+      <completion string="inheritance_column" />
+      <completion string="inheritance_column=" />
+      <completion string="inherited" />
+      <completion string="inspect" />
+      <completion string="instance_eval" />
+      <completion string="instance_exec" />
+      <completion string="instance_method" />
+      <completion string="instance_method_already_implemented?" />
+      <completion string="instance_methods" />
+      <completion string="instance_of?" />
+      <completion string="instance_values" />
+      <completion string="instance_variable_defined?" />
+      <completion string="instance_variable_get" />
+      <completion string="instance_variable_names" />
+      <completion string="instance_variable_set" />
+      <completion string="instance_variables" />
+      <completion string="instantiate_observers" />
+      <completion string="is_a?" />
+      <completion string="kind_of?" />
+      <completion string="last" />
+      <completion string="load_with_new_constant_marking" />
+      <completion string="local_constant_names" />
+      <completion string="local_constants" />
+      <completion string="lock_optimistically" />
+      <completion string="lock_optimistically=" />
+      <completion string="locking_column" />
+      <completion string="locking_column=" />
+      <completion string="locking_enabled?" />
+      <completion string="logger" />
+      <completion string="logger=" />
+      <completion string="match_attribute_method?" />
+      <completion string="mattr_accessor" />
+      <completion string="mattr_reader" />
+      <completion string="mattr_writer" />
+      <completion string="maximum" />
+      <completion string="merge_conditions" />
+      <completion string="metaclass" />
+      <completion string="method" />
+      <completion string="method_added" />
+      <completion string="method_defined?" />
+      <completion string="methods" />
+      <completion string="minimum" />
+      <completion string="model_name" />
+      <completion string="module_eval" />
+      <completion string="module_exec" />
+      <completion string="name" />
+      <completion string="named_scope" />
+      <completion string="new" />
+      <completion string="nil?" />
+      <completion string="notify_observers" />
+      <completion string="object_id" />
+      <completion string="observers" />
+      <completion string="observers=" />
+      <completion string="parent" />
+      <completion string="parent_name" />
+      <completion string="parents" />
+      <completion string="partial_updates" />
+      <completion string="partial_updates=" />
+      <completion string="partial_updates?" />
+      <completion string="pluralize_table_names" />
+      <completion string="pluralize_table_names=" />
+      <completion string="po" />
+      <completion string="poc" />
+      <completion string="present?" />
+      <completion string="pretty_inspect" />
+      <completion string="pretty_print" />
+      <completion string="pretty_print_cycle" />
+      <completion string="pretty_print_inspect" />
+      <completion string="pretty_print_instance_variables" />
+      <completion string="primary_key" />
+      <completion string="primary_key=" />
+      <completion string="primary_key_prefix_type" />
+      <completion string="primary_key_prefix_type=" />
+      <completion string="private_class_method" />
+      <completion string="private_instance_methods" />
+      <completion string="private_method_defined?" />
+      <completion string="private_methods" />
+      <completion string="protected_attributes" />
+      <completion string="protected_instance_methods" />
+      <completion string="protected_method_defined?" />
+      <completion string="protected_methods" />
+      <completion string="public_class_method" />
+      <completion string="public_instance_methods" />
+      <completion string="public_method_defined?" />
+      <completion string="public_methods" />
+      <completion string="quote_value" />
+      <completion string="quoted_locking_column" />
+      <completion string="quoted_table_name" />
+      <completion string="read_inheritable_attribute" />
+      <completion string="readonly_attributes" />
+      <completion string="record_timestamps" />
+      <completion string="record_timestamps=" />
+      <completion string="reflect_on_aggregation" />
+      <completion string="reflect_on_all_aggregations" />
+      <completion string="reflect_on_all_associations" />
+      <completion string="reflect_on_all_autosave_associations" />
+      <completion string="reflect_on_association" />
+      <completion string="reflections" />
+      <completion string="reject_new_nested_attributes_procs" />
+      <completion string="reject_new_nested_attributes_procs=" />
+      <completion string="remove_class" />
+      <completion string="remove_connection" />
+      <completion string="remove_subclasses" />
+      <completion string="remove_subclasses_of" />
+      <completion string="require" />
+      <completion string="require_association" />
+      <completion string="require_dependency" />
+      <completion string="require_library_or_gem" />
+      <completion string="require_or_load" />
+      <completion string="reset_column_information" />
+      <completion string="reset_column_information_and_inheritable_attributes_for_all_subclasses" />
+      <completion string="reset_inheritable_attributes" />
+      <completion string="reset_locking_column" />
+      <completion string="reset_primary_key" />
+      <completion string="reset_sequence_name" />
+      <completion string="reset_subclasses" />
+      <completion string="reset_table_name" />
+      <completion string="respond_to?" />
+      <completion string="retrieve_connection" />
+      <completion string="returning" />
+      <completion string="ri" />
+      <completion string="sanitize" />
+      <completion string="schema_format" />
+      <completion string="schema_format=" />
+      <completion string="scoped" />
+      <completion string="scopes" />
+      <completion string="self_and_descendants_from_active_record" />
+      <completion string="send" />
+      <completion string="sequence_name" />
+      <completion string="sequence_name=" />
+      <completion string="serialize" />
+      <completion string="serialized_attributes" />
+      <completion string="set_inheritance_column" />
+      <completion string="set_locking_column" />
+      <completion string="set_primary_key" />
+      <completion string="set_sequence_name" />
+      <completion string="set_table_name" />
+      <completion string="silence" />
+      <completion string="silence_stderr" />
+      <completion string="silence_stream" />
+      <completion string="silence_warnings" />
+      <completion string="singleton_methods" />
+      <completion string="skip_time_zone_conversion_for_attributes" />
+      <completion string="skip_time_zone_conversion_for_attributes=" />
+      <completion string="sti_name" />
+      <completion string="store_full_sti_class" />
+      <completion string="store_full_sti_class=" />
+      <completion string="store_full_sti_class?" />
+      <completion string="subclasses_of" />
+      <completion string="sum" />
+      <completion string="superclass" />
+      <completion string="superclass_delegating_accessor" />
+      <completion string="superclass_delegating_reader" />
+      <completion string="superclass_delegating_writer" />
+      <completion string="suppress" />
+      <completion string="synchronize" />
+      <completion string="table_exists?" />
+      <completion string="table_name" />
+      <completion string="table_name=" />
+      <completion string="table_name_prefix" />
+      <completion string="table_name_prefix=" />
+      <completion string="table_name_suffix" />
+      <completion string="table_name_suffix=" />
+      <completion string="taguri" />
+      <completion string="taguri=" />
+      <completion string="taint" />
+      <completion string="tainted?" />
+      <completion string="tap" />
+      <completion string="time_zone_aware_attributes" />
+      <completion string="time_zone_aware_attributes=" />
+      <completion string="timestamped_migrations" />
+      <completion string="timestamped_migrations=" />
+      <completion string="to_a" />
+      <completion string="to_enum" />
+      <completion string="to_json" />
+      <completion string="to_param" />
+      <completion string="to_query" />
+      <completion string="to_s" />
+      <completion string="to_yaml" />
+      <completion string="to_yaml_properties" />
+      <completion string="to_yaml_style" />
+      <completion string="transaction" />
+      <completion string="try" />
+      <completion string="type" />
+      <completion string="uncached" />
+      <completion string="unloadable" />
+      <completion string="untaint" />
+      <completion string="update" />
+      <completion string="update_all" />
+      <completion string="update_counters" />
+      <completion string="update_counters_with_lock" />
+      <completion string="update_counters_without_lock" />
+      <completion string="valid_keys_for_belongs_to_association" />
+      <completion string="valid_keys_for_belongs_to_association=" />
+      <completion string="valid_keys_for_has_and_belongs_to_many_association" />
+      <completion string="valid_keys_for_has_and_belongs_to_many_association=" />
+      <completion string="valid_keys_for_has_many_association" />
+      <completion string="valid_keys_for_has_many_association=" />
+      <completion string="valid_keys_for_has_one_association" />
+      <completion string="valid_keys_for_has_one_association=" />
+      <completion string="verification_timeout" />
+      <completion string="verification_timeout=" />
+      <completion string="verify_active_connections!" />
+      <completion string="with_options" />
+      <completion string="write_inheritable_array" />
+      <completion string="write_inheritable_attribute" />
+      <completion string="write_inheritable_hash" />
+      <completion string="yaml_as" />
+      <completion string="yaml_tag_class_name" />
+      <completion string="yaml_tag_read_class" />
+      <completion string="yaml_tag_subclasses?" />
+    </set>
+   
     
 </codesense>
