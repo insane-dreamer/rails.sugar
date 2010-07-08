@@ -332,9 +332,9 @@ end
 	<title>respond_to</title>
 			<text>
 			<![CDATA[
-        respond_to do |wants|
-        	wants.${1:html}${2: { $0 \}}
-        end
+  respond_to do |format|
+  	format.${1:html}${2: { $0 \}}
+  end
         ]]>
             </text>
 	<text-trigger>respt</text-trigger>
@@ -353,12 +353,12 @@ end
 			        <key>default</key>
 			        <string>
 			<![CDATA[
-        respond_to do |wants|
-        	wants.html do
-        		$SELECTED_TEXT
-        	end
-        	wants.${1:js} { $0 }
-        end
+  respond_to do |format|
+  	format.html do
+  		$SELECTED_TEXT
+  	end
+  	format.${1:js} { $0 }
+  end
             ]]>
                     </string>			        
 			        <key>undo_name</key>
@@ -370,9 +370,7 @@ end
 	
     <snippet id="actions.snippets.rails.controllers.respond_to.wants_format"     category="actions.snippets.rails/actions.snippets.rails.controllers/actions.snippets.rails.controllers.respond_to">
 	<title>wants_format</title>
-			<text>
-            wants.${1:js|xml|html}${2: { $0 \}}
-            </text>
+			<text>wants.${1:js|xml|html}${2: { $0 \}}</text>
 	<text-trigger>wants</text-trigger>
     <syntax-context>container.class.controller</syntax-context>
     </snippet>
@@ -384,20 +382,20 @@ end
 	<title>def create resource</title>
 			<text>
 			<![CDATA[
-def create
-	@${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}.new(params[:$1])
-	$0
-	respond_to do |wants|
-		if @$1.save
-			flash[:notice] = '$2 was successfully created.'
-			wants.html { redirect_to(@$1) }
-			wants.xml { render :xml => @$1, :status => :created, :location => @$1 }
-		else
-			wants.html { render :action => "new" }
-			wants.xml { render :xml => @$1.errors, :status => :unprocessable_entity }
-		end
-	end
-end
+  def create
+  	@${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}.new(params[:$1])
+  	$0
+  	respond_to do |format|
+  		if @$1.save
+  			flash[:notice] = '$2 was successfully created.'
+  			format.html { redirect_to(@$1) }
+  			format.xml { render :xml => @$1, :status => :created, :location => @$1 }
+  		else
+  			format.html { render :action => "new" }
+  			format.xml { render :xml => @$1.errors, :status => :unprocessable_entity }
+  		end
+  	end
+  end
 ]]>
             </text>
 	<text-trigger>defcreate</text-trigger>

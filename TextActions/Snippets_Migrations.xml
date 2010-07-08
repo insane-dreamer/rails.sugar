@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <snippet id="actions.snippets.rails.migrations.removecolumn" 
+    category="actions.snippets.rails/actions.snippets.rails.migrations">
+		<title>Remove Column</title>
+				<text>remove_column :${1:table}, :${2:column}${3: [press tab twice]}</text>
+		<text-trigger>rmcol</text-trigger>
+    <syntax-context>container.class.migration</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.migrations.addcolumn" 
+    category="actions.snippets.rails/actions.snippets.rails.migrations">
+		<title>Add Column</title>
+				<text>add_column :${1:table}, :${2:column}${3:}</text>
+		<text-trigger>addcol</text-trigger>
+    <syntax-context>container.class.migration</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.migrations.addtable" 
+    category="actions.snippets.rails/actions.snippets.rails.migrations">
+		<title>Add Table</title>
+				<text>add_table :${1:table}</text>
+		<text-trigger>addtbl</text-trigger>
+    <syntax-context>container.class.migration</syntax-context>
+    </snippet>
+
+    <snippet id="actions.snippets.rails.migrations.droptable" 
+    category="actions.snippets.rails/actions.snippets.rails.migrations">
+		<title>Remove Table</title>
+				<text>drop_table :${1:table}</text>
+		<text-trigger>droptbl</text-trigger>
+    <syntax-context>container.class.migration</syntax-context>
+    </snippet>
+
+</action-recipes>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+    
+<!--Assertions, Controllers-->
+    
+  <set name="com.rails.shoulda.asserts.controllers.content_type">
+    <behavior>
+        <append-static> ${1::rss}</append-static>
+    </behavior>
+    <completion string="should_respond_with_content_type" />
+  </set>
+
+<set name="com.rails.shoulda.asserts.controllers.render_with_layout">
+  <behavior>
+      <append-static> ${1:"special"}</append-static>
+  </behavior>
+<completion string="should_render_with_layout" />
+<completion string="should_not_render_with_layout" />
+</set>
+
+  <set name="com.rails.shoulda.asserts.controllers.render_a_form">
+    <completion string="should_render_a_form" />
+  </set>
+
+<set name="com.rails.shoulda.asserts.controllers.route">
+  <behavior>
+      <append-static> ${1::post, '/posts', post_url, :controller => ...}</append-static>
+  </behavior>
+<completion string="should_route" />
+</set>
+
+<set name="com.rails.shoulda.asserts.controllers.change">
+  <behavior>
+      <append-static> ${1:"Post.count", :from => 0, :to => 1 | :by => 1}</append-static>
+  </behavior>
+<completion string="should_change" />
+<completion string="should_not_change" />
+</set>
+
+<set name="com.rails.shoulda.asserts.controllers.assign_to">
+  <behavior>
+      <append-static> ${1::post, :equals => "@post"}</append-static>
+  </behavior>
+<completion string="should_assign_to" />
+<completion string="should_not_assign_to" />
+</set>
+
+
+<set name="com.rails.shoulda.asserts.controllers.return_from_session">
+  <behavior>
+      <append-static> ${1::user_id | "@user.id"}</append-static>
+  </behavior>
+  <completion string="should_return_from_session" />
+</set>
+  
+
+  <set name="com.rails.shoulda.asserts.controllers.respond_with">
+    <behavior>
+        <append-static> ${1::success|:redirect}</append-static>
+    </behavior>
+    <completion string="should_respond_with" />
+  </set>
+
+<set name="com.rails.shoulda.asserts.controllers.render_template">
+  <behavior>
+      <append-static> ${1::new | "new.html.erb"}</append-static>
+  </behavior>
+    <completion string="should_render_template" />
+</set>
+
+<set name="com.rails.shoulda.asserts.controllers.redirect_to">
+  <behavior>
+      <append-static> ${1:path}</append-static>
+  </behavior>
+    <completion string="should_redirect_to" />
+</set>
+
+<set name="com.rails.shoulda.asserts.controllers.set_flash">
+  <behavior>
+      <append-static> ${1:/regex/i}</append-static>
+  </behavior>
+      <completion string="should_set_the_flash_to" />
+      <completion string="should_not_set_the_flash_to" />
+</set>
+
+<!--Added Assertions-->
+
+  <set name="com.rails.shoulda.asserts.some_elements">
+    <behavior>
+        <append-static> ${1:[1,2,3],[3,2,1]}</append-static>
+    </behavior>
+    <completion string="assert_some_elements" />
+  </set>
+
+<set name="com.rails.shoulda.asserts.contains">
+  <behavior>
+      <append-static> ${1:['a','b'], /a/}</append-static>
+  </behavior>
+  <completion string="assert_contains" />
+  <completion string="assert_does_not_contain" />
+</set>
+
+<set name="com.rails.shoulda.asserts.good_value">
+  <behavior>
+      <append-static> ${1:Model, :method, "value"}</append-static>
+  </behavior>
+  <completion string="assert_good_value" />
+  <completion string="assert_bad_value" />
+</set>
+
+<set name="com.rails.shoulda.asserts">
+  <behavior>
+      <append-static> ${1:object}</append-static>
+  </behavior>
+  <completion string="assert_save" />
+  <completion string="assert_valid" />
+</set>
+
+</codesense>

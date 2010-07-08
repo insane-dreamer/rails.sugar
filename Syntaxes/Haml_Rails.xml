@@ -1,18 +1,16 @@
-<syntax name="name.insane-dreamer.Espresso.Syntax.Programming.ERB_Rails">
+<syntax name="name.insane-dreamer.Espresso.Syntax.Programming.Haml_Rails">
   <zones>
-	  <include collection="embedded.ruby" />
-	  <include syntax="text.html.basic"/>
-      <include syntax="name.elliottcable.Espresso.Syntax.Programming.ERB" />
+    <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
+    <include syntax="name.insane-dreamer.Espresso.Syntax.Programming.Rails" />
   </zones>
-  
 <library>
         <collection name="embedded.ruby">
             <zone name="embedded.ruby">
               <starts-with>
-                <expression>&lt;%</expression>
+                <expression>#{</expression>
               </starts-with>
               <ends-with>
-                <expression>%&gt;</expression>
+                <expression>}</expression>
               </ends-with>
               <subzones>
                 <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />

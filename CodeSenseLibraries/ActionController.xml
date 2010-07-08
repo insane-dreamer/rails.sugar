@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+    
+  <set name="com.rails.ac.filters">
+    <behavior>
+        <append-static> :${1:method}</append-static>
+    </behavior>
+    <completion string="before_filter" />
+    <completion string="around_filter" />
+    <completion string="after_filter" />
+  </set>
+
+  <set name="com.rails.ac.skipfilters">
+    <behavior>
+        <append-static> :${1:method}, :${2:only/except} => [${3:method}]</append-static>
+    </behavior>
+    <completion string="skip_before_filter" />
+    <completion string="skip_after_filter" />
+    <completion string="skip_after_filter" />
+  </set>
+
+</codesense>

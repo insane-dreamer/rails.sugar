@@ -24,6 +24,17 @@
     </detectors>
     
   </language>
+
+  <language id="name.insane-dreamer.haml">
+    <name>haml (Rails)</name>
+    
+    <root-zone>name.insane-dreamer.Espresso.Syntax.Programming.Haml_Rails</root-zone>
+    
+    <detectors>
+      <extension casesensitive="false">haml</extension>
+    </detectors>
+    
+  </language>
   
 
   <meta>

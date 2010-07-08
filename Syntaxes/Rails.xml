@@ -8,6 +8,8 @@
 	  <include collection="container.class.routes" />
 	  <include collection="container.class.test_unit" />
 	  <include collection="container.class.test_functional" />
+	  <include collection="container.class.migrations" />
+	  <include collection="container.class.helpers" />
 	  <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby" />
   </zones>
    
@@ -89,7 +91,7 @@
         </zone>
 	  </collection>
 	
-        <collection name="container.class.routes">
+    <collection name="container.class.routes">
         <zone name="container.class.routes">
             <starts-with>
                 <expression>(^\s*)(?=ActionController::Routing::Routes.*$)</expression>
@@ -105,10 +107,27 @@
         </zone>
 	  </collection>
 
-        <collection name="container.class.helpers">
+    <collection name="container.class.helpers">
         <zone name="container.class.helpers">
             <starts-with>
                 <expression>(^\s*)(?=module [A-Z].*?Helper\s*$)</expression>
+            </starts-with>
+            <ends-with>
+                <expression>^\1(?=end)\b</expression>
+            </ends-with>
+            <subzones>
+                <include collection="keyword.control" />
+                <include syntax="name.elliottcable.Espresso.Syntax.Programming.Ruby"/>
+                <include syntax="self"/>
+            </subzones>
+        </zone>
+	  </collection>
+
+
+    <collection name="container.class.migrations">
+        <zone name="container.class.migrations">
+            <starts-with>
+                <expression>(^\s*)(?=class\s+.+ActiveRecord::Migration)</expression>
             </starts-with>
             <ends-with>
                 <expression>^\1(?=end)\b</expression>

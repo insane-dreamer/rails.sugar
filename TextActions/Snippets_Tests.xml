@@ -208,12 +208,12 @@ $0
     category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.functional">
 		<title>def test_should_get_action</title>
 				<text>
-def test_should_get_${1:action}
-	${2:@${3:model} = ${4:$3s}(:${5:fixture_name})
-	}get :${1}${6:, :id => @$3.to_param}
-	assert_response :success
-	$0
-end
+  def test_should_get_${1:action}
+  	${2:@${3:model} = ${4:$3s}(:${5:fixture_name})
+  	}get :${1}${6:, :id => @$3.to_param}
+  	assert_response :success
+  	$0
+  end
       </text>
 		<text-trigger>deftg</text-trigger>
     <syntax-context>container.class.test_functional</syntax-context>		
@@ -223,14 +223,32 @@ end
     category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.functional">
 		<title>def test_should_post_action</title>
 				<text>
-def test_should_post_${1:action}
-	${3:@$2 = ${4:$2s}(:${5:fixture_name})
-	}post :${1}${6:, :id => @$2.to_param}, :${2:model} => { $0 }
-	assert_response :redirect
-end
+  def test_should_post_${1:action}
+  	${3:@$2 = ${4:$2s}(:${5:fixture_name})
+  	}post :${1}${6:, :id => @$2.to_param}, :${2:model} => { $0 }
+  	assert_response :redirect
+  end
       </text>
 		<text-trigger>deftp</text-trigger>
     <syntax-context>container.class.test_functional</syntax-context>		
+    </snippet>
+
+
+<!--  Shoulda -->
+
+    <snippet id="actions.snippets.rails.tests.shoulda.newcontext" 
+    category="actions.snippets.rails/actions.snippets.rails.tests/actions.snippets.rails.tests.shoulda">
+		<title>def context</title>
+				<text>
+  context "${1:context}" do 
+    setup do
+    end
+    should "${2:should}" do
+    end
+  end
+      </text>
+		<text-trigger>shcontext</text-trigger>
+    <syntax-context>container.class.test_unit, container.class.test_functional</syntax-context>		
     </snippet>
 
 

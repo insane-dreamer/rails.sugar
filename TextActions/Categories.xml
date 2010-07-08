@@ -103,5 +103,7 @@
 	</category>
 	<category id="actions.snippets.rails.tests.ajax" show="inline separated">
 	</category>
+<category id="actions.snippets.rails.tests.shoulda" show="inline separated">
+</category>
 
 </action-categories>

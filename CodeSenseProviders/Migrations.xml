@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+    <provider>
+      <selector>container.class.migrations</selector>
+      <completions>com.rails.migrations.add_column</completions>
+      <completions>com.rails.migrations.remove_column</completions>
+      <completions>com.rails.migrations.tables</completions>
+  		<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
+    </provider>
+
+    <provider>
+      <selector>container.class.migrations</selector>
+      <completions>com.rails.migrations.coltypes</completions>
+  		<complete-match capture="2">^\s*(t(\.\w*))</complete-match>
+    </provider>
+
+</codesense>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense>
 
-<!--All--
+<!--Controllers -->
+
     <provider>
       <selector>container.class.controller</selector>
-      <completions>com.rails.activerecord.base.public_methods</completions>
-  		<complete-match>[a-z]\w*?</complete-match>
+      <completions>com.rails.ac.filters</completions>
+      <completions>com.rails.ac.skipfilters</completions>
+  		<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
     </provider>
--->
 
 <!--Models only-->
 

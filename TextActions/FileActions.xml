@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+    <action id="actions.snippets.insert_file_path" category="actions.snippets">
+        <class>TEALoader</class>
+        <title>Open file on cursor</title>
+        <setup>
+            <script>open_file.rb</script>
+            <input>selection</input>
+            <alternate>word</alternate>
+            <output>text</output>
+            
+        </setup>
+    </action>
+
+
+</action-recipes>

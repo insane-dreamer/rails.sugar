@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+
+    <set name="com.rails.migrations.add_column">
+      <behavior>
+          <append-static> :${1:table}, :${2:column}, :${3:type}</append-static>
+      </behavior>
+      <completion string="add_column" />
+    </set>    
+        
+    <set name="com.rails.migrations.remove_column">
+      <behavior>
+          <append-static> :${1:table}, :${2:column}</append-static>
+      </behavior>
+      <completion string="remove_column" />
+    </set>    
+    
+    <set name="com.rails.migrations.tables">
+      <behavior>
+          <append-static> :${1:table}</append-static>
+      </behavior>
+      <completion string="add_table" />
+      <completion string="drop_table" />
+    </set>    
+
+    <set name="com.rails.migrations.coltypes">
+      <behavior>
+          <append-static> :${1:column}</append-static>
+      </behavior>
+      <completion string=".string" />
+      <completion string=".text" />
+      <completion string=".boolean" />
+      <completion string=".binary" />
+      <completion string=".date" />
+      <completion string=".time" />
+      <completion string=".integer" />
+      <completion string=".datetime" />
+      <completion string=".decimal" />
+      <completion string=".float" />
+      <completion string=".timestamps" />
+    </set>    
+
+</codesense>

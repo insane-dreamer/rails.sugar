@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+<!--Controllers -->
+
+    <provider>
+      <selector>container.class.test_functional</selector>
+      <completions>com.rails.shoulda.asserts.controllers</completions>
+      <completions>com.rails.shoulda.asserts.controllers.respond_with</completions>
+        <completions>com.rails.shoulda.asserts.controllers.content_type</completions>
+      <completions>com.rails.shoulda.asserts.controllers.render_with_layout</completions>
+        <completions>com.rails.shoulda.asserts.controllers.render_a_form</completions>
+      <completions>com.rails.shoulda.asserts.controllers.route</completions>
+      <completions>com.rails.shoulda.asserts.controllers.change</completions>
+      <completions>com.rails.shoulda.asserts.controllers.assign_to</completions>
+      <completions>com.rails.shoulda.asserts.controllers.return_from_session</completions>
+        <completions>com.rails.shoulda.asserts.controllers.respond_with</completions>
+      <completions>com.rails.shoulda.asserts.controllers.render_template</completions>
+      <completions>com.rails.shoulda.asserts.controllers.redirect_to</completions>
+      <completions>com.rails.shoulda.asserts.controllers.set_flash</completions>
+
+  		<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
+    </provider>
+
+<!--All-->
+
+<provider>
+  <selector>container.class.test_functional, container.class.test_unit</selector>
+  <completions>com.rails.shoulda.asserts.some_elements</completions>
+<completions>com.rails.shoulda.asserts.contains</completions>
+<completions>com.rails.shoulda.asserts.good_value</completions>
+<completions>com.rails.shoulda.asserts</completions>
+	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
+</provider>
+
+
+<!--Models only-->
+
+<!--    <provider>
+      <selector>container.class.model</selector>
+      <completions>com.rails.ar.associations</completions>
+      <completions>com.rails.ar.callbacks</completions>
+      <completions>com.rails.ar.validations</completions>
+  		<complete-match>[a-z]\w*</complete-match>
+    </provider>
+-->
+
+</codesense>
