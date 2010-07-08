@@ -27,7 +27,7 @@
 
 <set name="com.rails.shoulda.asserts.controllers.assign_to">
   <behavior>
-      <append-static> :${1:instance_variable}.with_kind_of(${2:Class})</append-static>
+      <append-static>(:${1:instance_variable}).with_kind_of(${2:Class})</append-static>
   </behavior>
 <completion string="should assign_to" />
 <completion string="should_not assign_to" />
