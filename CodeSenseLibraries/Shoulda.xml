@@ -5,91 +5,85 @@
     
   <set name="com.rails.shoulda.asserts.controllers.content_type">
     <behavior>
-        <append-static> ${1::rss}</append-static>
+        <append-static> :${1:rss}</append-static>
     </behavior>
-    <completion string="should_respond_with_content_type" />
+    <completion string="should respond_with_content_type" />
   </set>
 
 <set name="com.rails.shoulda.asserts.controllers.render_with_layout">
   <behavior>
-      <append-static> ${1:"special"}</append-static>
+      <append-static> :${1:layout}</append-static>
   </behavior>
-<completion string="should_render_with_layout" />
-<completion string="should_not_render_with_layout" />
+<completion string="should render_with_layout" />
+<completion string="should_not render_with_layout" />
 </set>
-
-  <set name="com.rails.shoulda.asserts.controllers.render_a_form">
-    <completion string="should_render_a_form" />
-  </set>
 
 <set name="com.rails.shoulda.asserts.controllers.route">
   <behavior>
-      <append-static> ${1::post, '/posts', post_url, :controller => ...}</append-static>
+      <append-static>(:${1:method}, "${2:path}"}).to(:controller => :${3:controller}, :action => :${4:method})</append-static>
   </behavior>
-<completion string="should_route" />
-</set>
-
-<set name="com.rails.shoulda.asserts.controllers.change">
-  <behavior>
-      <append-static> ${1:"Post.count", :from => 0, :to => 1 | :by => 1}</append-static>
-  </behavior>
-<completion string="should_change" />
-<completion string="should_not_change" />
+<completion string="should route" />
 </set>
 
 <set name="com.rails.shoulda.asserts.controllers.assign_to">
   <behavior>
-      <append-static> ${1::post, :equals => "@post"}</append-static>
+      <append-static> :${1:instance_variable}.with_kind_of(${2:Class})</append-static>
   </behavior>
-<completion string="should_assign_to" />
-<completion string="should_not_assign_to" />
+<completion string="should assign_to" />
+<completion string="should_not assign_to" />
 </set>
 
-
-<set name="com.rails.shoulda.asserts.controllers.return_from_session">
+<set name="com.rails.shoulda.asserts.controllers.filter_param">
   <behavior>
-      <append-static> ${1::user_id | "@user.id"}</append-static>
+      <append-static> :${1:param}</append-static>
   </behavior>
-  <completion string="should_return_from_session" />
+<completion string="should filter_param" />
 </set>
-  
 
   <set name="com.rails.shoulda.asserts.controllers.respond_with">
     <behavior>
-        <append-static> ${1::success|:redirect}</append-static>
+        <append-static> :${1:success|redirect|missing|error}</append-static>
     </behavior>
-    <completion string="should_respond_with" />
+    <completion string="should respond_with" />
   </set>
 
 <set name="com.rails.shoulda.asserts.controllers.render_template">
   <behavior>
       <append-static> ${1::new | "new.html.erb"}</append-static>
   </behavior>
-    <completion string="should_render_template" />
+    <completion string="should render_template" />
 </set>
 
 <set name="com.rails.shoulda.asserts.controllers.redirect_to">
   <behavior>
       <append-static> ${1:path}</append-static>
   </behavior>
-    <completion string="should_redirect_to" />
+    <completion string="should redirect_to" />
 </set>
 
 <set name="com.rails.shoulda.asserts.controllers.set_flash">
   <behavior>
-      <append-static> ${1:/regex/i}</append-static>
+      <append-static>.to(/${1:regex}/i)</append-static>
   </behavior>
-      <completion string="should_set_the_flash_to" />
-      <completion string="should_not_set_the_flash_to" />
+      <completion string="should set_the_flash" />
+      <completion string="should_not set_the_flash" />
+</set>
+
+<set name="com.rails.shoulda.asserts.controllers.set_session">
+  <behavior>
+      <append-static>(${1::key}).to(${2:value})</append-static>
+  </behavior>
+      <completion string="should set_session" />
+      <completion string="should_not set_session" />
 </set>
 
 <!--Added Assertions-->
 
-  <set name="com.rails.shoulda.asserts.some_elements">
+  <set name="com.rails.shoulda.asserts.same_elements">
     <behavior>
-        <append-static> ${1:[1,2,3],[3,2,1]}</append-static>
+        <append-static> ${1:[1,2,3]}, ${2:[3,2,1]}</append-static>
     </behavior>
-    <completion string="assert_some_elements" />
+    <completion string="assert_same_elements" />
   </set>
 
 <set name="com.rails.shoulda.asserts.contains">
@@ -100,15 +94,29 @@
   <completion string="assert_does_not_contain" />
 </set>
 
-<set name="com.rails.shoulda.asserts.good_value">
+<set name="com.rails.shoulda.asserts.rejects">
   <behavior>
-      <append-static> ${1:Model, :method, "value"}</append-static>
+      <append-static> ${1:/matcher/}, ${2:target}</append-static>
+  </behavior>
+  <completion string="assert_rejects" />
+</set>
+
+<set name="com.rails.shoulda.asserts.accepts">
+  <behavior>
+      <append-static> ${1:/matcher/}, ${2:target}</append-static>
+  </behavior>
+  <completion string="assert_accepts" />
+</set>
+
+<set name="com.rails.shoulda.asserts.good_bad_value">
+  <behavior>
+      <append-static> ${1:Model}, :${2:method}, "${3:value}"</append-static>
   </behavior>
   <completion string="assert_good_value" />
   <completion string="assert_bad_value" />
 </set>
 
-<set name="com.rails.shoulda.asserts">
+<set name="com.rails.shoulda.asserts.save_valid">
   <behavior>
       <append-static> ${1:object}</append-static>
   </behavior>

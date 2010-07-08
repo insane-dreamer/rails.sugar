@@ -9,15 +9,14 @@
       <completions>com.rails.shoulda.asserts.controllers.respond_with</completions>
         <completions>com.rails.shoulda.asserts.controllers.content_type</completions>
       <completions>com.rails.shoulda.asserts.controllers.render_with_layout</completions>
-        <completions>com.rails.shoulda.asserts.controllers.render_a_form</completions>
       <completions>com.rails.shoulda.asserts.controllers.route</completions>
-      <completions>com.rails.shoulda.asserts.controllers.change</completions>
       <completions>com.rails.shoulda.asserts.controllers.assign_to</completions>
-      <completions>com.rails.shoulda.asserts.controllers.return_from_session</completions>
+      <completions>com.rails.shoulda.asserts.controllers.filter_param</completions>
         <completions>com.rails.shoulda.asserts.controllers.respond_with</completions>
       <completions>com.rails.shoulda.asserts.controllers.render_template</completions>
       <completions>com.rails.shoulda.asserts.controllers.redirect_to</completions>
       <completions>com.rails.shoulda.asserts.controllers.set_flash</completions>
+      <completions>com.rails.shoulda.asserts.controllers.set_session</completions>
 
   		<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
     </provider>
@@ -26,12 +25,16 @@
 
 <provider>
   <selector>container.class.test_functional, container.class.test_unit</selector>
-  <completions>com.rails.shoulda.asserts.some_elements</completions>
+  <completions>com.rails.shoulda.asserts.same_elements</completions>
 <completions>com.rails.shoulda.asserts.contains</completions>
-<completions>com.rails.shoulda.asserts.good_value</completions>
-<completions>com.rails.shoulda.asserts</completions>
+<completions>com.rails.shoulda.asserts.rejects</completions>
+<completions>com.rails.shoulda.asserts.accepts</completions>
+  <completions>com.rails.shoulda.asserts.good_bad_value</completions>
+  <completions>com.rails.shoulda.asserts.save_valid</completions>
+  
 	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
 </provider>
+
 
 
 <!--Models only-->
