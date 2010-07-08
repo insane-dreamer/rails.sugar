@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+    
+<!--Assertions-->
+    
+  <set name="com.rails.minitest.match">
+    <behavior>
+        <append-static> /${1:match}/, ${2:target}</append-static>
+    </behavior>
+    <completion string="assert_match" />
+    <completion string="refute_match" />
+  </set>
+
+<set name="com.rails.minitest.equal">
+  <behavior>
+      <append-static> ${1:object}, ${2:object}</append-static>
+  </behavior>
+  <completion string="assert_equal" />
+  <completion string="refute_equal" />
+</set>
+
+<set name="com.rails.minitest.empty">
+  <behavior>
+      <append-static> ${1:object}</append-static>
+  </behavior>
+  <completion string="assert_empty" />
+  <completion string="refute_empty" />
+</set>
+
+<set name="com.rails.minitest.includes">
+  <behavior>
+      <append-static> ${1:collection}, ${2:object}</append-static>
+  </behavior>
+  <completion string="assert_includes" />
+  <completion string="refute_includes" />
+</set>
+
+<set name="com.rails.minitest.nil">
+  <behavior>
+      <append-static> ${1:object}</append-static>
+  </behavior>
+  <completion string="assert_nil" />
+  <completion string="refute_nil" />
+</set>
+
+<set name="com.rails.minitest.assert">
+  <behavior>
+      <append-static> ${1:test}</append-static>
+  </behavior>
+  <completion string="assert" />
+  <completion string="refute" />
+</set>
+
+
+</codesense>

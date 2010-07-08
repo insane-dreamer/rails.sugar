@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+<!--All-->
+
+<provider>
+  <selector>container.class.test_functional, container.class.test_unit</selector>
+  <completions>com.rails.minitest.match</completions>
+  <completions>com.rails.minitest.equal</completions>
+  <completions>com.rails.minitest.empty</completions>
+  <completions>com.rails.minitest.includes</completions>
+  <completions>com.rails.minitest.nil</completions>
+  <completions>com.rails.minitest.assert</completions>
+	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
+</provider>
+
+</codesense>
