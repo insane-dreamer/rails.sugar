@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+    
+<!-- ActionDispatch, for controllers -->
+    
+  <set name="com.rails.asserts.actiondispatch.select">
+    <behavior>
+        <append-static> "${1:element}", /${2:equality|regex|int|range}/</append-static>
+    </behavior>
+    <completion string="assert_select" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.select_rjs">
+    <behavior>
+        <append-static> :${1:action}, "${2:element}"</append-static>
+    </behavior>
+    <completion string="assert_select_rjs" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.css_select">
+    <behavior>
+        <append-static>("${1:selector}").each { |c| ${2:block} }</append-static>
+    </behavior>
+    <completion string="assert_css_select" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.select_encoded">
+    <behavior>
+        <append-static>{ ${1:block} }</append-static>
+    </behavior>
+    <completion string="assert_select_encoded" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.select_email">
+    <behavior>
+        <append-static>{ ${1:block} }</append-static>
+    </behavior>
+    <completion string="assert_select_email" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.assert_tag">
+    <behavior>
+        <append-static> :tag => :${1:tag}, :${2:attributes|parent|ancestor|child|descendent|children} => { :${3:attribute} => ${4:value} }</append-static>
+    </behavior>
+    <completion string="assert_tag" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.assert_no_tag">
+    <behavior>
+        <append-static> :tag => :${1:tag}, :${2:attributes|parent|ancestor|child|descendent|children} => { :${3:attribute} => ${4:value} }</append-static>
+    </behavior>
+    <completion string="assert_no_tag" />
+  </set>
+
+
+<!-- ActionDispatch, routing -->
+
+  <set name="com.rails.asserts.actiondispatch.assert_generates">
+    <behavior>
+        <append-static> "${1:path}", { :controller => "${2:controller}", :action => "${3:action}", ${4:options} }</append-static>
+    </behavior>
+    <completion string="assert_generates" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.assert_recognizes">
+    <behavior>
+        <append-static>({ :controller => "${1:controller}", :action => "${2:action}", ${3:options} }), "${4:path}"</append-static>
+    </behavior>
+    <completion string="assert_recognizes" />
+  </set>
+  
+  <set name="com.rails.asserts.actiondispatch.assert_routing">
+    <behavior>
+        <append-static> "${1:path}", { :controller => "${2:controller}", :action => "${3:action}", ${4:options} }</append-static>
+    </behavior>
+    <completion string="assert_routing" />
+  </set>
+
+
+<!-- ActionDispatch, for models -->
+
+  <set name="com.rails.asserts.actiondispatch.assert_valid">
+    <behavior>
+        <append-static> ${1:record}</append-static>
+    </behavior>
+    <completion string="assert_valid" />
+  </set>
+
+
+
+<!-- ActionDispatch, responses -->
+
+  <set name="com.rails.asserts.actiondispatch.assert_response">
+    <behavior>
+        <append-static> :${1:success|redirect|missing|error}</append-static>
+    </behavior>
+    <completion string="assert_response" />
+  </set>
+
+
+  <set name="com.rails.asserts.actiondispatch.assert_redirected_to">
+    <behavior>
+        <append-static> ${1:path}</append-static>
+    </behavior>
+    <completion string="assert_redirected_to" />
+  </set>
+
+
+
+
+
+
+<!-- ActiveSupport -->
+    
+  <set name="com.rails.asserts.activesupport.assert_blank">
+    <behavior>
+        <append-static> ${1:object}</append-static>
+    </behavior>
+    <completion string="assert_blank" />
+  </set>
+
+  <set name="com.rails.asserts.activesupport.assert_difference">
+    <behavior>
+        <append-static> "${1:expression}", ${2:difference} { ${3:block} }</append-static>
+    </behavior>
+    <completion string="assert_difference" />
+  </set>
+
+  <set name="com.rails.asserts.activesupport.assert_no_difference">
+    <behavior>
+        <append-static> "${1:expression}" { ${3:block} }</append-static>
+    </behavior>
+    <completion string="assert_no_difference" />
+  </set>
+  
+  <set name="com.rails.asserts.activesupport.assert_present">
+    <behavior>
+        <append-static> { ${1:expression} }</append-static>
+    </behavior>
+    <completion string="assert_present" />
+  </set>
+
+</codesense>

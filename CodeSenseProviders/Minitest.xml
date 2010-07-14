@@ -11,6 +11,16 @@
   <completions>com.rails.minitest.includes</completions>
   <completions>com.rails.minitest.nil</completions>
   <completions>com.rails.minitest.assert</completions>
+  <completions>com.rails.minitest.block</completions>
+  <completions>com.rails.minitest.kind_of</completions>
+  <completions>com.rails.minitest.raises</completions>
+  <completions>com.rails.minitest.respond_to</completions>
+  <completions>com.rails.minitest.same</completions>
+  <completions>com.rails.minitest.send</completions>
+  <completions>com.rails.minitest.throw</completions>
+  <completions>com.rails.minitest.in_delta</completions>
+  <completions>com.rails.minitest.in_epsilon</completions>
+  <completions>com.rails.minitest.operator</completions>
 	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
 </provider>
 

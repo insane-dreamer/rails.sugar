@@ -3,6 +3,22 @@
     
 <!--Assertions-->
     
+  <set name="com.rails.minitest.nil">
+    <behavior>
+        <append-static> ${1:object}</append-static>
+    </behavior>
+    <completion string="assert_nil" />
+    <completion string="refute_nil" />
+  </set>
+    
+  <set name="com.rails.minitest.assert">
+    <behavior>
+        <append-static> ${1:test}</append-static>
+    </behavior>
+    <completion string="assert" />
+    <completion string="refute" />
+  </set>
+    
   <set name="com.rails.minitest.match">
     <behavior>
         <append-static> /${1:match}/, ${2:target}</append-static>
@@ -35,21 +51,87 @@
   <completion string="refute_includes" />
 </set>
 
-<set name="com.rails.minitest.nil">
+<set name="com.rails.minitest.raises">
   <behavior>
-      <append-static> ${1:object}</append-static>
+      <append-static> ${1:*expression}</append-static>
   </behavior>
-  <completion string="assert_nil" />
-  <completion string="refute_nil" />
+  <completion string="assert_raises" />
 </set>
 
-<set name="com.rails.minitest.assert">
+<set name="com.rails.minitest.block">
   <behavior>
-      <append-static> ${1:test}</append-static>
+      <append-static> {${1:block}}</append-static>
   </behavior>
-  <completion string="assert" />
-  <completion string="refute" />
+  <completion string="assert_block" />
 </set>
 
+<set name="com.rails.minitest.instance_of">
+  <behavior>
+      <append-static> ${1:class}, ${2:object}</append-static>
+  </behavior>
+  <completion string="assert_instance_of" />
+  <completion string="refute_instance_of" />
+</set>
+
+<set name="com.rails.minitest.kind_of">
+  <behavior>
+      <append-static> ${1:class}, ${2:object}</append-static>
+  </behavior>
+  <completion string="assert_kind_of" />
+  <completion string="refute_kind_of" />
+</set>
+
+<set name="com.rails.minitest.same">
+  <behavior>
+      <append-static> ${1:expression}, ${2:action}</append-static>
+  </behavior>
+  <completion string="assert_same" />
+  <completion string="refute_same" />
+</set>
+
+<set name="com.rails.minitest.send">
+  <behavior>
+      <append-static> ${1:send_ary}</append-static>
+  </behavior>
+  <completion string="assert_send" />
+</set>
+
+<set name="com.rails.minitest.respond_to">
+  <behavior>
+      <append-static> ${1:*expression}</append-static>
+  </behavior>
+  <completion string="assert_respond_to" />
+  <completion string="refute_respond_to" />
+</set>
+
+<set name="com.rails.minitest.operator">
+  <behavior>
+      <append-static> ${1:o1}, ${2:op}, ${3:o2}</append-static>
+  </behavior>
+  <completion string="assert_operator" />
+</set>
+
+<set name="com.rails.minitest.throws">
+  <behavior>
+      <append-static> ${1:*expression}</append-static>
+  </behavior>
+  <completion string="assert_throws" />
+</set>
+
+<set name="com.rails.minitest.in_delta">
+  <behavior>
+      <append-static> ${1:expression}, ${2:act}, ${3:delta}</append-static>
+  </behavior>
+  <completion string="assert_in_delta" />
+  <completion string="refute_in_delta" />
+</set>
+
+<set name="com.rails.minitest.in_epsilon">
+  <behavior>
+      <append-static> ${1:expression}, ${2:act}, ${3:epsilon}</append-static>
+  </behavior>
+  <completion string="assert_in_epsilon" />
+  <completion string="refute_in_epsilon" />
+</set>
 
 </codesense>
