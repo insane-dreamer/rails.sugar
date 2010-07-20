@@ -19,6 +19,8 @@
     <completions>com.rails.asserts.actiondispatch.assert_response</completions>
     <completions>com.rails.asserts.actiondispatch.assert_redirected_to</completions>
     <completions>com.rails.asserts.actiondispatch.assert_template</completions>    
+  <completions>com.rails.asserts.actiondispatch.assert_dom_equal</completions>
+  <completions>com.rails.asserts.actiondispatch.assert_dom_not_equal</completions>
 	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
 </provider>
 

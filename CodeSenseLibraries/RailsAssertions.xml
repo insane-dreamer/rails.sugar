@@ -52,6 +52,22 @@
     <completion string="assert_no_tag" />
   </set>
 
+  <set name="com.rails.asserts.actiondispatch.assert_dom_equal">
+    <behavior>
+        <append-static> "${1:<a href="http://www.example.com">Apples</a>}", ${2:link_to("Apples", "http://www.example.com"}</append-static>
+    </behavior>
+    <completion string="assert_dom_equal" />
+  </set>
+
+  <set name="com.rails.asserts.actiondispatch.assert_dom_not_equal">
+    <behavior>
+        <append-static> "${1:<a href="http://www.example.com">Apples</a>}", ${2:link_to("Apples", "http://www.example.com"}</append-static>
+    </behavior>
+    <completion string="assert_dom_not_equal" />
+  </set>
+  
+
+
 
 <!-- ActionDispatch, routing -->
 
