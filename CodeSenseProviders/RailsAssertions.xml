@@ -18,6 +18,7 @@
     <completions>com.rails.asserts.actiondispatch.assert_routing</completions>
     <completions>com.rails.asserts.actiondispatch.assert_response</completions>
     <completions>com.rails.asserts.actiondispatch.assert_redirected_to</completions>
+    <completions>com.rails.asserts.actiondispatch.assert_template</completions>    
 	<complete-match capture="1">^\s*(?!\.)([a-z]\w*)</complete-match>
 </provider>
 

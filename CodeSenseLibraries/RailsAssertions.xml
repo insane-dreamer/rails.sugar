@@ -105,8 +105,12 @@
     <completion string="assert_redirected_to" />
   </set>
 
-
-
+  <set name="com.rails.asserts.actiondispatch.assert_template">
+    <behavior>
+        <append-static> :${1:template}</append-static>
+    </behavior>
+    <completion string="assert_template" />
+  </set>
 
 
 
