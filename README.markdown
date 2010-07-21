@@ -14,17 +14,17 @@ _Overall goals:_
 **DONE:**
 
 * Snippets for Controllers, Models, Routes, Layouts, Views, ActiveSupport, Tests (based off TextMate RoR bundle)
-* CodeSense for AR finders, validations, filters, associations
+* CodeSense for Active Record, Migrations, Minitest & Rails assertions, Shoulda.
 
 
 **TODOS:**
 
 * Snippets for Helpers
-* Snippets for Migrations
-* CodeSense for ActiveRecord (finish)
+* -Snippets for Migrations-
+* -CodeSense for ActiveRecord-
 * CodeSense for ActiveSupport
 * CodeSense for ActionPack
-* Snippets/Codesense for Shoulda (probably as a separate sugar)
+* -Snippets/Codesense for Shoulda (probably as a separate sugar)-
 
 
 **WISHLIST:**
@@ -36,7 +36,7 @@ at which time, hopefully the below could be implemented._
 * File actions (switch between M, V and C)
 * Run tests. 
 * Git support (probably as a separate sugar)
-* Find in project (hopefully implemented by MacRabbit in the core)
+* -Find in project (hopefully implemented by MacRabbit in the core)-
 
 
 
