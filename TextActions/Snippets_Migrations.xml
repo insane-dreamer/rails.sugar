@@ -3,34 +3,34 @@
 
     <snippet id="actions.snippets.rails.migrations.removecolumn" 
     category="actions.snippets.rails/actions.snippets.rails.migrations">
-		<title>Remove Column</title>
+		<title>remove column</title>
 				<text>remove_column :${1:table}, :${2:column}${3: [press tab twice]}</text>
 		<text-trigger>rmcol</text-trigger>
-    <syntax-context>container.class.migration</syntax-context>
+    <syntax-context>container.class.migrations</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.migrations.addcolumn" 
     category="actions.snippets.rails/actions.snippets.rails.migrations">
-		<title>Add Column</title>
+		<title>add column</title>
 				<text>add_column :${1:table}, :${2:column}${3:}</text>
 		<text-trigger>addcol</text-trigger>
-    <syntax-context>container.class.migration</syntax-context>
+    <syntax-context>container.class.migrations</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.migrations.addtable" 
     category="actions.snippets.rails/actions.snippets.rails.migrations">
-		<title>Add Table</title>
+		<title>add table</title>
 				<text>add_table :${1:table}</text>
 		<text-trigger>addtbl</text-trigger>
-    <syntax-context>container.class.migration</syntax-context>
+    <syntax-context>container.class.migrations</syntax-context>
     </snippet>
 
     <snippet id="actions.snippets.rails.migrations.droptable" 
     category="actions.snippets.rails/actions.snippets.rails.migrations">
-		<title>Remove Table</title>
+		<title>remove table</title>
 				<text>drop_table :${1:table}</text>
 		<text-trigger>droptbl</text-trigger>
-    <syntax-context>container.class.migration</syntax-context>
+    <syntax-context>container.class.migrations</syntax-context>
     </snippet>
 
 </action-recipes>
